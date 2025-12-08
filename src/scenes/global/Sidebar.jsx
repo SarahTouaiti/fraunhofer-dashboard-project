@@ -27,30 +27,30 @@ export default function Sidebar() {
       variant="permanent"
       anchor="left"
       sx={{
-        width: 260,
+        width: 300,
         "& .MuiDrawer-paper": {
-          width: 260,
+          width: 300,
           backgroundColor: colors.primary[400], // exakt wie Topbar
           color: colors.grey[100],
           borderRight: "none",
         },
       }}
     >
-      <Box display="flex" flexDirection="column" alignItems="center" mt={2}>
+      <Box display="flex" justifyContent="center" alignItems="center" mt={5}>
         <img
           alt="fraunhofer-logo"
-          width="90px"
-          height="90px"
+          width="50px"
+          height="50px"
           src="../../../assets/logosquare.png"
-          style={{ borderRadius: "8px" }}
+          style={{ borderRadius: "5px" }}
         />
         <Typography
           variant="h3"
           color={colors.greenAccent[500]} // Fraunhofer in grün
           fontWeight="bold"
-          mt={1}
+          ml={2}
         >
-          Fraunhofer
+          Fraunhofer IPK
         </Typography>
       </Box>
 
@@ -65,13 +65,17 @@ export default function Sidebar() {
         ))}
       </List>
 
-      <Box mt="auto" mb={3}>
-        <Box display="flex" justifyContent="center" alignItems="center">
-          <IconButton sx={{ color: colors.grey[100] }}>
-            <LogOutIcon />
-          </IconButton>
-          <Typography color={colors.grey[100]}>Logout</Typography>
-        </Box>
+      <Box
+        mt="auto"
+        mb={3}
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <IconButton sx={{ color: colors.grey[100] }}>
+          <LogOutIcon />
+        </IconButton>
+        <Typography color={colors.grey[100]}>Logout</Typography>
       </Box>
     </Drawer>
   );
@@ -84,7 +88,7 @@ function SidebarSection({ section, selected, setSelected }) {
   return (
     <Box px={2}>
       <Typography
-        variant="h6"
+        variant="h5"
         fontWeight="bold"
         sx={{ mt: 2, mb: 1, color: colors.grey[300] }}
       >
