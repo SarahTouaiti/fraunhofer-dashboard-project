@@ -2,7 +2,7 @@ import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider, Box } from "@mui/material";
 import Home from "./components/Home.jsx";
 
-import Sidebar from "./scenes/global/Sidebar";
+//import Sidebar from "./scenes/global/Sidebar";
 import Topbar from "./scenes/global/Topbar";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Box display="flex">
-          <Sidebar />
+          {/* <Sidebar /> */}
           <Box component="main" flexGrow={1}>
             <Topbar />
             {/* Hier kommt der restliche Content */}
