@@ -1,5 +1,10 @@
+import HomeIcon from "@mui/icons-material/Home";
+import WorkIcon from "@mui/icons-material/Work";
+import BuildIcon from "@mui/icons-material/Build";
+import ShowChartIcon from "@mui/icons-material/ShowChart";
+
 export const menu = [
-  { header: "To The Project", items: [] },
+  { header: "To The Project", items: [], icon: <HomeIcon /> },
   {
     header: "Decentralized Production Control",
     items: [
@@ -16,6 +21,7 @@ export const menu = [
       },
       { title: "Smart Maintenance", children: [] },
     ],
+    icon: <WorkIcon />,
   },
   {
     header: "Digital Assistance",
@@ -27,6 +33,7 @@ export const menu = [
       { title: "Machine Operation", children: ["Help (ChatBot)"] },
       { title: "Virtual EDM Assistance", children: [] },
     ],
+    icon: <BuildIcon />,
   },
   {
     header: "Energy Monitoring",
@@ -52,5 +59,6 @@ export const menu = [
         ],
       },
     ],
+    icon: <ShowChartIcon />,
   },
 ];

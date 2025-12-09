@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { menu } from "../../data/menuData";
 import { tokens } from "../../theme";
+import logo from "../..//assets/logo.png";
 import {
   Drawer,
   Box,
@@ -21,50 +22,69 @@ export default function Sidebar() {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [selected, setSelected] = useState("");
+  const [openItems, setOpenItems] = useState({}); // Track open submenus
+  const drawerWidth = 300;
+
+  const toggleItem = (title) => {
+    setOpenItems((prev) => ({ ...prev, [title]: !prev[title] }));
+  };
 
   return (
     <Drawer
-      variant="permanent"
+      variant="persistent"
+      open={true}
       anchor="left"
       sx={{
-        width: 300,
+        width: drawerWidth,
         "& .MuiDrawer-paper": {
-          width: 300,
-          backgroundColor: colors.primary[400], // exakt wie Topbar
+          width: drawerWidth,
+          backgroundColor: colors.primary[400],
           color: colors.grey[100],
           borderRight: "none",
         },
       }}
     >
-      <Box display="flex" justifyContent="center" alignItems="center" mt={5}>
+      {/* Sidebar Header */}
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        p={2}
+        mt={5}
+      >
         <img
-          alt="fraunhofer-logo"
-          width="50px"
-          height="50px"
-          src="../../../assets/logosquare.png"
-          style={{ borderRadius: "5px" }}
+          src={logo}
+          alt="fraunhofer-Logo"
+          height={50}
+          width={50}
+          style={{ borderRadius: 5 }}
         />
         <Typography
           variant="h3"
-          color={colors.greenAccent[500]} // Fraunhofer in grün
           fontWeight="bold"
+          color={colors.greenAccent[500]}
           ml={2}
         >
           Fraunhofer IPK
         </Typography>
       </Box>
 
+      {/* Menu Sections */}
       <List sx={{ mt: 2 }}>
-        {menu.map((section, index) => (
+        {menu.map((section, idx) => (
           <SidebarSection
-            key={index}
+            key={idx}
             section={section}
             selected={selected}
             setSelected={setSelected}
+            openItems={openItems}
+            toggleItem={toggleItem}
+            level={0}
           />
         ))}
       </List>
 
+      {/* Logout */}
       <Box
         mt="auto"
         mb={3}
@@ -75,112 +95,140 @@ export default function Sidebar() {
         <IconButton sx={{ color: colors.grey[100] }}>
           <LogOutIcon />
         </IconButton>
-        <Typography color={colors.grey[100]}>Logout</Typography>
+        <Typography color={colors.grey[100]} ml={1}>
+          Logout
+        </Typography>
       </Box>
     </Drawer>
   );
 }
 
-function SidebarSection({ section, selected, setSelected }) {
+function SidebarSection({
+  section,
+  selected,
+  setSelected,
+  openItems,
+  toggleItem,
+  level,
+}) {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const isActive = selected === section.header;
 
   return (
     <Box px={2}>
       <Typography
         variant="h5"
         fontWeight="bold"
-        sx={{ mt: 2, mb: 1, color: colors.grey[300] }}
+        sx={{
+          mt: 2,
+          mb: 1,
+          color: isActive ? colors.blueAccent[500] : colors.grey[300],
+          cursor: "pointer",
+          userSelect: "none",
+          display: "flex",
+          alignItems: "center",
+        }}
+        onClick={() => setSelected(section.header)}
       >
+        {section.icon && <Box mr={1}>{section.icon}</Box>}
         {section.header}
       </Typography>
 
-      {section.items.map((item, index) => (
+      {section.items.map((item, idx) => (
         <SidebarItem
-          key={index}
+          key={idx}
           item={item}
-          level={0}
+          level={level}
           selected={selected}
           setSelected={setSelected}
+          openItems={openItems}
+          toggleItem={toggleItem}
         />
       ))}
     </Box>
   );
 }
 
-function SidebarItem({ item, level, selected, setSelected }) {
+function SidebarItem({
+  item,
+  level,
+  selected,
+  setSelected,
+  openItems,
+  toggleItem,
+}) {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const [open, setOpen] = useState(false);
-
-  const hasChildren = Array.isArray(item.children) && item.children.length > 0;
+  const hasChildren = item.children && item.children.length > 0;
   const isActive = selected === item.title;
+  const isOpen = openItems[item.title] || false;
+
+  const handleClick = () => {
+    setSelected(item.title);
+    if (hasChildren) toggleItem(item.title);
+  };
+
+  const renderChild = (child, idx) => {
+    if (typeof child === "string") {
+      return (
+        <ListItemButton
+          key={idx}
+          onClick={() => setSelected(child)}
+          sx={{
+            pl: 4 + level * 3,
+            borderRadius: 2,
+            color:
+              selected === child ? colors.blueAccent[500] : colors.grey[100],
+            backgroundColor:
+              selected === child ? colors.primary[400] : "transparent",
+            "&:hover": {
+              color: colors.blueAccent[400],
+              backgroundColor: colors.primary[400],
+            },
+          }}
+        >
+          <ListItemText primary={child} />
+        </ListItemButton>
+      );
+    }
+    return (
+      <SidebarItem
+        key={idx}
+        item={child}
+        level={level + 1}
+        selected={selected}
+        setSelected={setSelected}
+        openItems={openItems}
+        toggleItem={toggleItem}
+      />
+    );
+  };
 
   return (
     <>
       <ListItemButton
-        onClick={() => {
-          setSelected(item.title);
-          if (hasChildren) setOpen(!open);
-        }}
+        onClick={handleClick}
         sx={{
-          pl: 2 + level * 2,
-          borderRadius: "5px",
+          pl: 3 + level * 3,
+          borderRadius: 2,
           mx: 1,
           my: 0.3,
-          color: isActive ? "#6870fa" : colors.grey[100],
+          color: isActive ? colors.blueAccent[500] : colors.grey[100],
           backgroundColor: isActive ? colors.primary[400] : "transparent",
           "&:hover": {
-            color: "#868dfb",
+            color: colors.blueAccent[400],
             backgroundColor: colors.primary[400],
           },
         }}
       >
-        <ListItemText
-          primary={item.title}
-          primaryTypographyProps={{ fontSize: 14 }}
-        />
-        {hasChildren && (open ? <ExpandLess /> : <ExpandMore />)}
+        <ListItemText primary={item.title} />
+        {hasChildren && (isOpen ? <ExpandLess /> : <ExpandMore />)}
       </ListItemButton>
 
       {hasChildren && (
-        <Collapse in={open} timeout="auto" unmountOnExit>
-          <List disablePadding>
-            {item.children.map((child, idx) =>
-              typeof child === "string" ? (
-                <ListItemButton
-                  key={idx}
-                  onClick={() => setSelected(child)}
-                  sx={{
-                    pl: 4 + level * 2,
-                    borderRadius: "5px",
-                    mx: 1,
-                    my: 0.3,
-                    color: selected === child ? "#6870fa" : colors.grey[100],
-                    backgroundColor:
-                      selected === child ? colors.primary[400] : "transparent",
-                    "&:hover": {
-                      color: "#868dfb",
-                      backgroundColor: colors.primary[400],
-                    },
-                  }}
-                >
-                  <ListItemText
-                    primary={child}
-                    primaryTypographyProps={{ fontSize: 13 }}
-                  />
-                </ListItemButton>
-              ) : (
-                <SidebarItem
-                  key={idx}
-                  item={child}
-                  level={level + 1}
-                  selected={selected}
-                  setSelected={setSelected}
-                />
-              )
-            )}
-          </List>
+        <Collapse in={isOpen} timeout="auto" unmountOnExit>
+          {item.children.map(renderChild)}
         </Collapse>
       )}
     </>
