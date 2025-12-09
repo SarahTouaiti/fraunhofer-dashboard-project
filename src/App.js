@@ -1,5 +1,6 @@
 import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider, Box } from "@mui/material";
+import Home from "./components/Home.jsx";
 
 import Sidebar from "./scenes/global/Sidebar";
 import Topbar from "./scenes/global/Topbar";
@@ -15,6 +16,7 @@ function App() {
           <Box component="main" flexGrow={1}>
             <Topbar />
             {/* Hier kommt der restliche Content */}
+            <Home />
           </Box>
         </Box>
       </ThemeProvider>
