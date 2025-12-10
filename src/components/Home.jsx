@@ -1,9 +1,15 @@
 import { Box, Grid, Typography, Divider, useTheme } from "@mui/material";
 import { tokens } from "../theme";
+
 import reTraNetzLogo from "../assets/reTraNetz.png";
 import digitalAssistance from "../assets/digitalAssistance.png";
 import energyMonitoring from "../assets/energyMonitoring.png";
 import digitallyIntegratedProduction from "../assets/digitallyIntegratedProduction.png";
+
+import fraunhoferIPKLogo from "../assets/FraunhoferLogoWithText.png";
+import IWFLogo from "../assets/IWFLogo.png";
+import retranetzLogo from "../assets/retranetzLogo.png";
+import ministryLogo from "../assets/federalMinistryForEconomicAffairsAndEnergyLogo.png";
 
 const Home = () => {
   const theme = useTheme();
@@ -35,7 +41,7 @@ const Home = () => {
         >
           ReTraNetz-BB
         </Typography>
-        <Typography variant="h5" color={colors.grey[100]} fontWeight={"normal"}>
+        <Typography variant="h3" color={colors.grey[100]} fontWeight={"normal"}>
           Regional Transformation Network for the Automotive and Supplier
           Industry
         </Typography>
@@ -60,7 +66,12 @@ const Home = () => {
             <img
               alt="ReTraNetz Logo"
               src={reTraNetzLogo}
-              style={{ width: "550px", height: "auto", borderRadius: 5 }}
+              style={{
+                maxWidth: "100%",
+                width: "400px",
+                height: "auto",
+                borderRadius: 5,
+              }}
             />
           </Grid>
           <Grid item>
@@ -210,6 +221,47 @@ const Home = () => {
           </Grid>
         </Grid>
       </Grid>
+      {/* Footer Section */}
+      <Box m={2} p={2} borderRadius="5px" backgroundColor={colors.primary[400]}>
+        <Grid
+          container
+          spacing={4}
+          justifyContent="center"
+          alignItems="center"
+          flexWrap="wrap"
+        >
+          {[
+            { src: fraunhoferIPKLogo, alt: "Fraunhofer IPK" },
+            { src: IWFLogo, alt: "IWF Logo" },
+            { src: retranetzLogo, alt: "ReTraNetz Logo" },
+            { src: ministryLogo, alt: "Federal Ministry Logo" },
+          ].map((logo, index) => (
+            <Grid item key={index}>
+              <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                height="80px" // Uniform height
+                width="150px" // Max width for bigger logos
+                sx={{
+                  transition: "transform 0.3s",
+                  "&:hover": { transform: "scale(1.05)" },
+                }}
+              >
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  style={{
+                    maxHeight: "100%",
+                    maxWidth: "100%",
+                    objectFit: "contain",
+                  }}
+                />
+              </Box>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
     </>
   );
 };
