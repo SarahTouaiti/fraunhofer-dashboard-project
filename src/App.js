@@ -1,12 +1,13 @@
 import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider, Box } from "@mui/material";
 
-import Home from "./components/Home.jsx";
+//import Home from "./components/Home.jsx";
 //import DigitalAssistance from "./components/DigitalAssistance.jsx";
 //import RealWorldLaboratory from "./components/RealWorldLaboratory.jsx";
 //import DigitallyIntegratedProduction from "./components/DigitallyIntegratedProduction.jsx";
+import EnergyMonitoring from "./components/EnergyMonitoring.jsx";
 
-import Sidebar from "./scenes/global/Sidebar";
+//import Sidebar from "./scenes/global/Sidebar";
 import Topbar from "./scenes/global/Topbar";
 
 function App() {
@@ -16,11 +17,12 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Box display="flex">
-          <Sidebar />
+          {/* <Sidebar /> */}
           <Box component="main" flexGrow={1}>
             <Topbar />
             {/* Hier kommt der restliche Content */}
-            <Home />
+            {/* <Home /> */}
+            <EnergyMonitoring />
             {/*<DigitalAssistance />*/}
             {/*<RealWorldLaboratory />*/}
             {/* <DigitallyIntegratedProduction /> */}

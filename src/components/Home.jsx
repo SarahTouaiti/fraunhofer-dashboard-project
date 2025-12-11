@@ -66,12 +66,7 @@ const Home = () => {
             <img
               alt="ReTraNetz Logo"
               src={reTraNetzLogo}
-              style={{
-                maxWidth: "100%",
-                width: "400px",
-                height: "auto",
-                borderRadius: 5,
-              }}
+              style={{ width: "550px", height: "auto", borderRadius: 5 }}
             />
           </Grid>
           <Grid item>
@@ -221,6 +216,7 @@ const Home = () => {
           </Grid>
         </Grid>
       </Grid>
+
       {/* Footer Section */}
       <Box m={2} p={2} borderRadius="5px" backgroundColor={colors.primary[400]}>
         <Grid
@@ -241,20 +237,23 @@ const Home = () => {
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
-                height="80px" // Uniform height
-                width="150px" // Max width for bigger logos
+                width={{ xs: "120px", sm: "140px", md: "150px" }}
+                height={{ xs: "60px", sm: "70px", md: "80px" }}
                 sx={{
-                  transition: "transform 0.3s",
-                  "&:hover": { transform: "scale(1.05)" },
+                  transition: "transform 0.3s ease",
+                  "&:hover": {
+                    transform: "scale(1.1)", // slightly enlarge on hover
+                  },
                 }}
               >
                 <img
                   src={logo.src}
                   alt={logo.alt}
                   style={{
-                    maxHeight: "100%",
                     maxWidth: "100%",
+                    maxHeight: "100%",
                     objectFit: "contain",
+                    display: "block",
                   }}
                 />
               </Box>
