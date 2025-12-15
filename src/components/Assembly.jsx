@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Grid, Typography, Divider, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
 import Header from "../scenes/global/Header";
@@ -8,6 +9,7 @@ import assembly from "../assets/shaft.png";
 const Assembly = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const navigate = useNavigate();
   return (
     <Box>
       <Header
