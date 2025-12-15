@@ -1,13 +1,13 @@
 import { ColorModeContext, useMode } from "./theme";
-import { CssBaseline, ThemeProvider, Box } from "@mui/material";
-
-//import Home from "./components/Home.jsx";
-//import DigitalAssistance from "./components/DigitalAssistance.jsx";
-//import RealWorldLaboratory from "./components/RealWorldLaboratory.jsx";
-//import DigitallyIntegratedProduction from "./components/DigitallyIntegratedProduction.jsx";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { Routes, Route } from "react-router-dom";
+import Home from "./components/Home.jsx";
+import DigitalAssistance from "./components/DigitalAssistance.jsx";
+import RealWorldLaboratory from "./components/RealWorldLaboratory.jsx";
+import DigitallyIntegratedProduction from "./components/DigitallyIntegratedProduction.jsx";
 import EnergyMonitoring from "./components/EnergyMonitoring.jsx";
 
-//import Sidebar from "./scenes/global/Sidebar";
+import Sidebar from "./scenes/global/Sidebar";
 import Topbar from "./scenes/global/Topbar";
 
 function App() {
@@ -16,18 +16,28 @@ function App() {
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Box display="flex">
-          {/* <Sidebar /> */}
-          <Box component="main" flexGrow={1}>
+        <div className="app">
+          <Sidebar />
+          <main className="content">
             <Topbar />
-            {/* Hier kommt der restliche Content */}
-            {/* <Home /> */}
-            <EnergyMonitoring />
-            {/*<DigitalAssistance />*/}
-            {/*<RealWorldLaboratory />*/}
-            {/* <DigitallyIntegratedProduction /> */}
-          </Box>
-        </Box>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route
+                path="/digital-assistance"
+                element={<DigitalAssistance />}
+              />
+              <Route
+                path="/real-world-Laboratory"
+                element={<RealWorldLaboratory />}
+              />
+              <Route
+                path="/digitally-integrated-production"
+                element={<DigitallyIntegratedProduction />}
+              />
+              <Route path="/energy-monitoring" element={<EnergyMonitoring />} />
+            </Routes>
+          </main>
+        </div>
       </ThemeProvider>
     </ColorModeContext.Provider>
   );

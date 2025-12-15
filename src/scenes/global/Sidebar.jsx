@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { menu } from "../../data/menuData";
 import { tokens } from "../../theme";
-import logo from "../..//assets/logo.png";
+import logo from "../../assets/logo.png";
 import {
   Drawer,
   Box,
@@ -22,7 +23,7 @@ export default function Sidebar() {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [selected, setSelected] = useState("");
-  const [openItems, setOpenItems] = useState({}); // Track open submenus
+  const [openItems, setOpenItems] = useState({});
   const drawerWidth = 300;
 
   const toggleItem = (title) => {
@@ -79,7 +80,6 @@ export default function Sidebar() {
             setSelected={setSelected}
             openItems={openItems}
             toggleItem={toggleItem}
-            level={0}
           />
         ))}
       </List>
@@ -109,7 +109,6 @@ function SidebarSection({
   setSelected,
   openItems,
   toggleItem,
-  level,
 }) {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -117,29 +116,37 @@ function SidebarSection({
 
   return (
     <Box px={2}>
+      {/* MAIN HEADER */}
+      {/* Only the top-level header is clickable if it has a path */}
       <Typography
+        component={section.path ? Link : "div"} // Link only if path exists
+        to={section.path || "#"} // use path from menuData.js
         variant="h5"
         fontWeight="bold"
         sx={{
           mt: 2,
           mb: 1,
           color: isActive ? colors.blueAccent[500] : colors.grey[300],
-          cursor: "pointer",
-          userSelect: "none",
+          cursor: section.path ? "pointer" : "default",
+          textDecoration: "none",
           display: "flex",
           alignItems: "center",
+          "&:hover": {
+            color: section.path ? colors.blueAccent[400] : colors.grey[300],
+          },
         }}
-        onClick={() => setSelected(section.header)}
+        onClick={() => setSelected(section.header)} // highlights selected
       >
         {section.icon && <Box mr={1}>{section.icon}</Box>}
         {section.header}
       </Typography>
 
+      {/* Render section items (keep your nested items intact) */}
       {section.items.map((item, idx) => (
         <SidebarItem
           key={idx}
           item={item}
-          level={level}
+          level={0}
           selected={selected}
           setSelected={setSelected}
           openItems={openItems}
@@ -169,6 +176,7 @@ function SidebarItem({
     if (hasChildren) toggleItem(item.title);
   };
 
+  // render children recursively if any
   const renderChild = (child, idx) => {
     if (typeof child === "string") {
       return (
@@ -192,6 +200,7 @@ function SidebarItem({
         </ListItemButton>
       );
     }
+    // If child is an object with children
     return (
       <SidebarItem
         key={idx}

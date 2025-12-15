@@ -4,7 +4,7 @@ import BuildIcon from "@mui/icons-material/Build";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
 
 export const menu = [
-  { header: "To The Project", items: [], icon: <HomeIcon /> },
+  { header: "To The Project", items: [], icon: <HomeIcon />, path: "/" }, // added path
   {
     header: "Decentralized Production Control",
     items: [
@@ -22,6 +22,7 @@ export const menu = [
       { title: "Smart Maintenance", children: [] },
     ],
     icon: <WorkIcon />,
+    path: "/real-world-laboratory", // added path
   },
   {
     header: "Digital Assistance",
@@ -34,6 +35,7 @@ export const menu = [
       { title: "Virtual EDM Assistance", children: [] },
     ],
     icon: <BuildIcon />,
+    path: "/digital-assistance", // added path
   },
   {
     header: "Energy Monitoring",
@@ -60,5 +62,6 @@ export const menu = [
       },
     ],
     icon: <ShowChartIcon />,
+    path: "/energy-monitoring", // added path
   },
 ];
