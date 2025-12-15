@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Box, Grid, Typography, Divider, useTheme } from "@mui/material";
+import { Box, Grid, Typography, Divider, Link, useTheme } from "@mui/material";
 import { tokens } from "../theme";
 import Header from "../scenes/global/Header";
 import electricalMotor from "../assets/ElectricMotor.png";
@@ -121,6 +121,11 @@ const Assembly = () => {
               <Typography variant="h5" color={colors.grey[100]}>
                 The housing for the electrical motor must be assembled precisely
                 to ensure optimal performance.
+              </Typography>
+              <Typography variant="h5" mt={1}>
+                <Link href="#" color={colors.blueAccent[500]} underline="hover">
+                  Go to guide
+                </Link>
               </Typography>
             </Grid>
           </Grid>
