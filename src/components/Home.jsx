@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Box, Grid, Typography, Divider, useTheme } from "@mui/material";
 import { tokens } from "../theme";
 
@@ -14,6 +15,7 @@ import ministryLogo from "../assets/federalMinistryForEconomicAffairsAndEnergyLo
 const Home = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -104,6 +106,7 @@ const Home = () => {
             borderRadius={1}
             spacing={2}
             alignItems="center"
+            onClick={() => navigate("/digital-assistance")}
           >
             <Grid item>
               <img
@@ -144,6 +147,7 @@ const Home = () => {
             borderRadius={1}
             spacing={2}
             alignItems="center"
+            onClick={() => navigate("/energy-monitoring")}
           >
             <Grid item>
               <img
@@ -184,6 +188,7 @@ const Home = () => {
             borderRadius={1}
             spacing={2}
             alignItems="center"
+            onClick={() => navigate("/digitally-integrated-production")}
           >
             <Grid item>
               <img
