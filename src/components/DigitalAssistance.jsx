@@ -162,6 +162,15 @@ const DigitalAssistance = () => {
             p={2}
             borderRadius="5px"
             alignItems="center"
+            onClick={() => navigate("/digital-assistance/chatbot")}
+            sx={{
+              cursor: "pointer",
+              transition: "transform 0.2s, background-color 0.2s",
+              "&:hover": {
+                transform: "scale(1.03",
+                backgroundColor: colors.primary[300],
+              },
+            }}
           >
             <Grid item>
               <Box
@@ -189,46 +198,6 @@ const DigitalAssistance = () => {
               />
               <Typography variant="h5" color={colors.grey[100]}>
                 Use Chatbot to quickly get answers to your questions.
-              </Typography>
-            </Grid>
-          </Grid>
-
-          {/* Block 3 (example extra one if needed) */}
-          <Grid
-            item
-            container
-            spacing={2}
-            backgroundColor={colors.primary[400]}
-            p={2}
-            borderRadius="5px"
-            alignItems="center"
-          >
-            <Grid item>
-              <Box
-                component="img"
-                alt="Example"
-                src={Assembly}
-                sx={{ width: 150, height: "auto", borderRadius: "5px" }}
-              />
-            </Grid>
-            <Grid item xs>
-              <Typography
-                variant="h3"
-                color={colors.greenAccent[500]}
-                fontWeight="bold"
-              >
-                Another Feature
-              </Typography>
-              <Divider
-                sx={{
-                  my: 1,
-                  height: "0.5px",
-                  width: "100px",
-                  backgroundColor: colors.greenAccent[500],
-                }}
-              />
-              <Typography variant="h5" color={colors.grey[100]}>
-                Add another horizontally aligned block if needed.
               </Typography>
             </Grid>
           </Grid>
