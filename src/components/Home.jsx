@@ -107,6 +107,14 @@ const Home = () => {
             spacing={2}
             alignItems="center"
             onClick={() => navigate("/digital-assistance")}
+            sx={{
+              cursor: "pointer", // change cursor to pointer on hover
+              transition: "transform 0.2s, background-color 0.2s",
+              "&:hover": {
+                transform: "scale(1.03)",
+                backgroundColor: colors.primary[300],
+              },
+            }}
           >
             <Grid item>
               <img
@@ -148,6 +156,14 @@ const Home = () => {
             spacing={2}
             alignItems="center"
             onClick={() => navigate("/energy-monitoring")}
+            sx={{
+              cursor: "pointer",
+              transition: "transform 0.2s, background-color 0.2s",
+              "&:hover": {
+                transform: "scale(1.03)",
+                backgroundColor: colors.primary[300],
+              },
+            }}
           >
             <Grid item>
               <img
@@ -189,6 +205,14 @@ const Home = () => {
             spacing={2}
             alignItems="center"
             onClick={() => navigate("/digitally-integrated-production")}
+            sx={{
+              cursor: "pointer",
+              transition: "transform 0.2s, background-color 0.2s",
+              "&:hover": {
+                transform: "scale(1.03)",
+                backgroundColor: colors.primary[300],
+              },
+            }}
           >
             <Grid item>
               <img
