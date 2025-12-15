@@ -66,7 +66,7 @@ const Assembly = () => {
             textAlign="center"
             mb={2}
           >
-            Check the availibility and status of the 3D-printed parts to proceed
+            Check the availability and status of the 3D-printed parts to proceed
             with the assembly and keep the process efficient.
           </Typography>
         </Grid>
