@@ -47,7 +47,7 @@ const DigitalAssistance = () => {
       </Box>
 
       {/* Main Grid */}
-      <Grid container spacing={4} m={2}>
+      <Grid container spacing={4} m={2} alignItems="stretch">
         {/* LEFT COLUMN */}
         <Grid
           item
