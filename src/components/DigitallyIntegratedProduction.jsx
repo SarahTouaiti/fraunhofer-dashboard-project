@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Box, Typography, Divider, Grid, Paper, useTheme } from "@mui/material";
 import { tokens } from "../theme";
 
@@ -6,6 +7,7 @@ import { parts } from "../data/parts.js";
 const DigitallyIntegratedProduction = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const navigate = useNavigate();
   return (
     <Box>
       {/* Header Section */}
@@ -49,6 +51,9 @@ const DigitallyIntegratedProduction = () => {
             sx={{
               flex: "0 0 auto", // prevent shrinking
               width: 250, // fixed width for consistent cards
+            }}
+            onClick={() => {
+              navigate(part.link);
             }}
           >
             <Paper
