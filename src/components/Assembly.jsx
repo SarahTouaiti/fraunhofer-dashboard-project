@@ -10,17 +10,22 @@ const Assembly = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const navigate = useNavigate();
+
   return (
     <Box>
+      {/* Header */}
       <Header
         title="Digital Assistance > Assembly"
         subtitle="Assemble two components using a guide for efficient process automation, or use our chatbot for additional support."
       />
+
+      {/* Main Grid */}
       <Grid container spacing={4} m={2}>
         {/* LEFT COLUMN */}
         <Grid
           item
           xs={12}
+          sm={6}
           md={6}
           container
           direction="column"
@@ -35,7 +40,7 @@ const Assembly = () => {
             alt="Assembly"
             sx={{
               width: "100%",
-              maxWidth: "400px",
+              maxWidth: "350px",
               height: "auto",
               borderRadius: "5px",
               mb: 2,
@@ -72,7 +77,15 @@ const Assembly = () => {
         </Grid>
 
         {/* RIGHT COLUMN */}
-        <Grid item xs={12} md={6} container direction="column" spacing={2}>
+        <Grid
+          item
+          xs={12}
+          sm={6}
+          md={6}
+          container
+          direction="column"
+          spacing={2}
+        >
           {/* Block 1 */}
           <Grid
             item
