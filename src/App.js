@@ -6,6 +6,7 @@ import DigitalAssistance from "./components/DigitalAssistance.jsx";
 import RealWorldLaboratory from "./components/RealWorldLaboratory.jsx";
 import DigitallyIntegratedProduction from "./components/DigitallyIntegratedProduction.jsx";
 import EnergyMonitoring from "./components/EnergyMonitoring.jsx";
+import Assembly from "./components/Assembly.jsx";
 
 import Sidebar from "./scenes/global/Sidebar";
 import Topbar from "./scenes/global/Topbar";
@@ -35,6 +36,10 @@ function App() {
                 element={<DigitallyIntegratedProduction />}
               />
               <Route path="/energy-monitoring" element={<EnergyMonitoring />} />
+              <Route
+                path="/digital-assistance/assembly"
+                element={<Assembly />}
+              />
             </Routes>
           </main>
         </div>

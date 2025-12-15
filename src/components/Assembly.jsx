@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { Grid, Typography, Divider, useTheme } from "@mui/material";
-import { tokens } from "../../theme";
+import { Box, Grid, Typography, Divider, useTheme } from "@mui/material";
+import { tokens } from "../theme";
 import Header from "../scenes/global/Header";
 import electricalMotor from "../assets/ElectricMotor.png";
 import electricalMotorHousing from "../assets/ElectricMotorHousing.png";
@@ -89,7 +89,7 @@ const Assembly = () => {
               cursor: "pointer",
               transition: "transform 0.2s, background-color 0.2s",
               "&:hover": {
-                transform: "scale(1.03",
+                transform: "scale(1.03)",
                 backgroundColor: colors.primary[300],
               },
             }}
@@ -141,7 +141,7 @@ const Assembly = () => {
               cursor: "pointer",
               transition: "transform 0.2s, background-color 0.2s",
               "&:hover": {
-                transform: "scale(1.03",
+                transform: "scale(1.03)",
                 backgroundColor: colors.primary[300],
               },
             }}

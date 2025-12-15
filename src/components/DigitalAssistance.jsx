@@ -118,7 +118,7 @@ const DigitalAssistance = () => {
               cursor: "pointer",
               transition: "transform 0.2s, background-color 0.2s",
               "&:hover": {
-                transform: "scale(1.03",
+                transform: "scale(1.03)",
                 backgroundColor: colors.primary[300],
               },
             }}
@@ -167,7 +167,7 @@ const DigitalAssistance = () => {
               cursor: "pointer",
               transition: "transform 0.2s, background-color 0.2s",
               "&:hover": {
-                transform: "scale(1.03",
+                transform: "scale(1.03)",
                 backgroundColor: colors.primary[300],
               },
             }}
