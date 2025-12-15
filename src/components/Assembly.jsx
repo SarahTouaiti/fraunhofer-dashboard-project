@@ -80,7 +80,9 @@ const Assembly = () => {
             p={2}
             borderRadius="5px"
             alignItems="center"
-            onClick={() => navigate("/digital-assistance/assembly")}
+            onClick={() =>
+              navigate("/digital-assistance/assembly/electrical-motor-housing")
+            }
             sx={{
               cursor: "pointer",
               transition: "transform 0.2s, background-color 0.2s",
@@ -130,6 +132,17 @@ const Assembly = () => {
             p={2}
             borderRadius="5px"
             alignItems="center"
+            onClick={() =>
+              navigate("/digital-assistance/assembly/electrical-motor")
+            }
+            sx={{
+              cursor: "pointer",
+              transition: "transform 0.2s, background-color 0.2s",
+              "&:hover": {
+                transform: "scale(1.03",
+                backgroundColor: colors.primary[300],
+              },
+            }}
           >
             <Grid item>
               <Box
