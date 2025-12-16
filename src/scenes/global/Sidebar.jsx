@@ -116,11 +116,10 @@ function SidebarSection({
 
   return (
     <Box px={2}>
-      {/* MAIN HEADER */}
-      {/* Only the top-level header is clickable if it has a path */}
+      {/* Top-level Header */}
       <Typography
-        component={section.path ? Link : "div"} // Link only if path exists
-        to={section.path || "#"} // use path from menuData.js
+        component={section.path ? Link : "div"}
+        to={section.path || "#"}
         variant="h5"
         fontWeight="bold"
         sx={{
@@ -135,13 +134,13 @@ function SidebarSection({
             color: section.path ? colors.blueAccent[400] : colors.grey[300],
           },
         }}
-        onClick={() => setSelected(section.header)} // highlights selected
+        onClick={() => setSelected(section.header)}
       >
         {section.icon && <Box mr={1}>{section.icon}</Box>}
         {section.header}
       </Typography>
 
-      {/* Render section items (keep your nested items intact) */}
+      {/* Section items */}
       {section.items.map((item, idx) => (
         <SidebarItem
           key={idx}
@@ -176,48 +175,12 @@ function SidebarItem({
     if (hasChildren) toggleItem(item.title);
   };
 
-  // render children recursively if any
-  const renderChild = (child, idx) => {
-    if (typeof child === "string") {
-      return (
-        <ListItemButton
-          key={idx}
-          onClick={() => setSelected(child)}
-          sx={{
-            pl: 4 + level * 3,
-            borderRadius: 2,
-            color:
-              selected === child ? colors.blueAccent[500] : colors.grey[100],
-            backgroundColor:
-              selected === child ? colors.primary[400] : "transparent",
-            "&:hover": {
-              color: colors.blueAccent[400],
-              backgroundColor: colors.primary[400],
-            },
-          }}
-        >
-          <ListItemText primary={child} />
-        </ListItemButton>
-      );
-    }
-    // If child is an object with children
-    return (
-      <SidebarItem
-        key={idx}
-        item={child}
-        level={level + 1}
-        selected={selected}
-        setSelected={setSelected}
-        openItems={openItems}
-        toggleItem={toggleItem}
-      />
-    );
-  };
-
   return (
     <>
       <ListItemButton
         onClick={handleClick}
+        component={item.path ? Link : "div"}
+        to={item.path || "#"}
         sx={{
           pl: 3 + level * 3,
           borderRadius: 2,
@@ -237,7 +200,17 @@ function SidebarItem({
 
       {hasChildren && (
         <Collapse in={isOpen} timeout="auto" unmountOnExit>
-          {item.children.map(renderChild)}
+          {item.children.map((child, idx) => (
+            <SidebarItem
+              key={idx}
+              item={child}
+              level={level + 1}
+              selected={selected}
+              setSelected={setSelected}
+              openItems={openItems}
+              toggleItem={toggleItem}
+            />
+          ))}
         </Collapse>
       )}
     </>
