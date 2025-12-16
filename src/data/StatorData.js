@@ -9,42 +9,41 @@ export const statorData = [
     name: "Wire Insulation",
     image: wireInsulationImage,
     description: [
-      "The copper winding is coated with varnish.",
-      "Prevents short circuits.",
-      "The coating slightly reduces the fill factor in the slots.",
+      "The copper winding is coated with varnish to prevent short circuits.",
+      "The coating slightly reduces the slot fill factor.",
     ],
   },
   {
     name: "Slot Insulation",
     image: slotInsulationImage,
     description: [
-      "Sheet packages are insulated in the slots using insulation paper to protect the copper winding.",
-      "Prevents voltage flashovers and protects against sharp edges.",
+      "Sheet stacks are insulated in the slots using insulation paper to protect the copper winding.",
+      "This prevents voltage flashovers and damage from sharp edges.",
     ],
   },
   {
     name: "Round Wire",
     image: roundWireImage,
     description: [
-      "Round wire is produced from copper.",
-      "Manufacturing is done by drawing and rolling wire rods.",
+      "Round wire is made from copper.",
+      "It is produced through a sequence of drawing and rolling wire rods.",
     ],
   },
   {
     name: "Flat Wire",
     image: flatWireImage,
     description: [
-      "Uses hairpin technology.",
+      "Utilizes hairpin technology.",
       "Achieves a higher slot fill factor.",
-      "Increases efficiency.",
+      "Improves motor efficiency.",
     ],
   },
   {
     name: "Impregnation",
     image: impregnationImage,
     description: [
-      "The coils are impregnated with resin after winding to improve electrical insulation, thermal conductivity, and resistance to mechanical stress.",
-      "Impregnation is carried out using resin.",
+      "After winding, the coils are impregnated with resin to improve electrical insulation, thermal conductivity, and mechanical strength.",
+      "The impregnation process uses specialized resin materials.",
     ],
   },
 ];
