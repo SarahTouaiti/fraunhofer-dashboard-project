@@ -1,8 +1,8 @@
-import flatWireImage from "../assets/Stator/FlatWire.png";
-import roundWireImage from "../assets/Stator/RoundWire.png";
-import slotInsulationImage from "../assets/Stator/SlotInsulation.png";
-import wireInsulationImage from "../assets/Stator/WireInsulation.png";
-import impregnationImage from "../assets/Stator/Impregnation.png";
+import flatWireImage from "../assets/stator/flatWire.png";
+import roundWireImage from "../assets/stator/roundWire.png";
+import slotInsulationImage from "../assets/stator/slotInsulation.png";
+import wireInsulationImage from "../assets/stator/wireInsulation.png";
+import impregnationImage from "../assets/stator/impregnation.png";
 
 export const statorData = [
   {

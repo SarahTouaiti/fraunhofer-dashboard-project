@@ -2,9 +2,9 @@ import { useNavigate } from "react-router-dom";
 import { Box, Grid, Typography, Divider, Link, useTheme } from "@mui/material";
 import { tokens } from "../theme";
 import Header from "../scenes/global/Header";
-import electricalMotor from "../assets/ElectricMotor.png";
-import electricalMotorHousing from "../assets/ElectricMotorHousing.png";
-import assembly from "../assets/shaft.png";
+import electricalMotor from "../assets/assembly/electricMotor.png";
+import electricalMotorHousing from "../assets/assembly/electricMotorHousing.png";
+import assembly from "../assets/assembly/shaft.png";
 
 const Assembly = () => {
   const theme = useTheme();

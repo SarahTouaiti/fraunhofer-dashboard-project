@@ -1,7 +1,7 @@
-import stator from "../assets/stator.png";
-import laminatedCore from "../assets/laminatedCore.png";
-import rotor from "../assets/rotor.png";
-import shaft from "../assets/shaft.png";
+import stator from "../assets/parts/stator.png";
+import laminatedCore from "../assets/parts/laminatedCore.png";
+import rotor from "../assets/parts/rotor.png";
+import shaft from "../assets/parts/shaft.png";
 
 export const parts = [
   {

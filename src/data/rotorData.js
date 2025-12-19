@@ -1,12 +1,12 @@
-import Commutator from "../assets/Rotor/Commutator.png";
-import Contacting from "../assets/Rotor/Contacting.png";
-import ElectricalTesting from "../assets/Rotor/ElectricalTesting.png";
-import Impregnation from "../assets/Rotor/Impregnation.png";
-import Insulation from "../assets/Rotor/Insulation.png";
-import MagnetAssembly from "../assets/Rotor/MagnetAssembly.png";
-import MagnetFixation from "../assets/Rotor/MagnetFixation.png";
-import Magnetization from "../assets/Rotor/Magnetization.png";
-import Winding from "../assets/Rotor/Winding.png";
+import Commutator from "../assets/rotor/commutator.png";
+import Contacting from "../assets/rotor/contacting.png";
+import ElectricalTesting from "../assets/rotor/electricalTesting.png";
+import Impregnation from "../assets/rotor/impregnation.png";
+import Insulation from "../assets/rotor/insulation.png";
+import MagnetAssembly from "../assets/rotor/magnetAssembly.png";
+import MagnetFixation from "../assets/rotor/magnetFixation.png";
+import Magnetization from "../assets/rotor/magnetization.png";
+import Winding from "../assets/rotor/winding.png";
 
 export const rotorData = [
   {

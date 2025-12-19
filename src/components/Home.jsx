@@ -2,15 +2,15 @@ import { useNavigate } from "react-router-dom";
 import { Box, Grid, Typography, Divider, useTheme } from "@mui/material";
 import { tokens } from "../theme";
 
-import reTraNetzLogo from "../assets/reTraNetz.png";
-import digitalAssistance from "../assets/digitalAssistance.png";
-import energyMonitoring from "../assets/energyMonitoring.png";
-import digitallyIntegratedProduction from "../assets/digitallyIntegratedProduction.png";
+import reTraNetzLogo from "../assets/home/reTraNetz.png";
+import digitalAssistance from "../assets/home/digitalAssistance.png";
+import energyMonitoring from "../assets/home/energyMonitoring.png";
+import digitallyIntegratedProduction from "../assets/home/digitallyIntegratedProduction.png";
 
-import fraunhoferIPKLogo from "../assets/FraunhoferLogoWithText.png";
-import IWFLogo from "../assets/IWFLogo.png";
-import retranetzLogo from "../assets/retranetzLogo.png";
-import ministryLogo from "../assets/federalMinistryForEconomicAffairsAndEnergyLogo.png";
+import fraunhoferIPKLogo from "../assets/home/FraunhoferLogoWithText.png";
+import IWFLogo from "../assets/home/IWFLogo.png";
+import retranetzLogo from "../assets/home/retranetzLogo.png";
+import ministryLogo from "../assets/home/federalMinistryForEconomicAffairsAndEnergyLogo.png";
 
 const Home = () => {
   const theme = useTheme();

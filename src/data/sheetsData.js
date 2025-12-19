@@ -1,5 +1,5 @@
-import cuttingSheetsImage from "../assets/LaminatedCore/cuttingSheets.png";
-import stackingSheetsImage from "../assets/LaminatedCore/stackingSheets.png";
+import cuttingSheetsImage from "../assets/laminatedCore/cuttingSheets.png";
+import stackingSheetsImage from "../assets/laminatedCore/stackingSheets.png";
 
 export const sheetsData = [
   {

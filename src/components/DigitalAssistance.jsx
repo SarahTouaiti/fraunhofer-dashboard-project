@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { Box, Typography, Grid, Divider, useTheme } from "@mui/material";
 import { tokens } from "../theme";
-import digitalAssistance from "../assets/DigitalAssistanceComponentDA.png";
-import Assembly from "../assets/Assembly.png";
-import Chatbot from "../assets/ChatBot.png";
+import digitalAssistance from "../assets/digitalAssistance/digitalAssistanceComponentDA.png";
+import Assembly from "../assets/digitalAssistance/assembly.png";
+import Chatbot from "../assets/digitalAssistance/chatBot.png";
 
 const DigitalAssistance = () => {
   const theme = useTheme();

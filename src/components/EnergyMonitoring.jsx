@@ -1,7 +1,7 @@
 import { Box, Typography, Grid, useTheme } from "@mui/material";
 import { tokens } from "../theme";
 
-import europeanUnionLogo from "../assets/EuropeanUnionLogo.jpg";
+import europeanUnionLogo from "../assets/europeanUnionLogo.jpg";
 
 const EnergyMonitoring = () => {
   const theme = useTheme();
