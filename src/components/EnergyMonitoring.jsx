@@ -3,6 +3,8 @@ import { tokens } from "../theme";
 
 import europeanUnionLogo from "../assets/europeanUnionLogo.jpg";
 
+import NavButton from "../scenes/global/NavButton.jsx";
+
 const EnergyMonitoring = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -73,6 +75,9 @@ const EnergyMonitoring = () => {
           </Typography>
         </Grid>
       </Grid>
+      <Box m={2} display="flex" justifyContent="right" alignItems="center">
+        <NavButton title="Home" path="/" />
+      </Box>
     </>
   );
 };

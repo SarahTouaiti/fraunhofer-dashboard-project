@@ -1,7 +1,8 @@
 import { Box, Paper, Grid, useTheme, Typography, Divider } from "@mui/material";
 import { tokens } from "../../theme";
 import Header from "../../scenes/global/Header";
-import { statorData } from "../../data/statordata.js";
+import { statorData } from "../../data/statorData.js";
+import NavButton from "../../scenes/global/NavButton.jsx";
 
 const Stator = () => {
   const theme = useTheme();
@@ -101,6 +102,9 @@ const Stator = () => {
           </Grid>
         ))}
       </Grid>
+      <Box m={2} display="flex" justifyContent="right" alignItems="center">
+        <NavButton title="Home" path="/digitally-integrated-production" />
+      </Box>
     </Box>
   );
 };

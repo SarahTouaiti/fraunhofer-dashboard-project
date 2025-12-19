@@ -4,6 +4,7 @@ import { tokens } from "../theme";
 import digitalAssistance from "../assets/digitalAssistance/digitalAssistanceComponentDA.png";
 import Assembly from "../assets/digitalAssistance/assembly.png";
 import Chatbot from "../assets/digitalAssistance/chatBot.png";
+import NavButton from "../scenes/global/NavButton";
 
 const DigitalAssistance = () => {
   const theme = useTheme();
@@ -201,6 +202,9 @@ const DigitalAssistance = () => {
           </Grid>
         </Grid>
       </Grid>
+      <Box m={2} display="flex" justifyContent="right" alignItems="center">
+        <NavButton title="Home" path="/" />
+      </Box>
     </Box>
   );
 };

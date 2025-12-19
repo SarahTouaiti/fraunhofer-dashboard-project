@@ -1,6 +1,8 @@
 import { Box, Typography, useTheme } from "@mui/material";
 import { tokens } from "../theme";
 
+import NavButton from "../scenes/global/NavButton";
+
 const RealWorldLaboratory = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -39,6 +41,9 @@ const RealWorldLaboratory = () => {
           Exploring Practical Applications and Innovations in Real-World
           Settings
         </Typography>
+      </Box>
+      <Box m={2} display="flex" justifyContent="right" alignItems="center">
+        <NavButton title="Home" path="/" />
       </Box>
     </Box>
   );

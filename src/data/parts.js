@@ -32,7 +32,7 @@ export const parts = [
     name: "Housing",
     img: shaft,
     desc: "The housing protects internal parts of the motor and provides mechanical stability.",
-    link: "/digital-assistance/assembly/housing.",
+    link: "/digital-assistance/assembly/housing",
   },
   {
     name: "Final Assembly",

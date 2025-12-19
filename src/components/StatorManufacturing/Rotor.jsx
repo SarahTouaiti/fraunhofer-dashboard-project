@@ -2,6 +2,7 @@ import { Box, Paper, Grid, Typography, Divider, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
 import { rotorData } from "../../data/rotorData";
 import Header from "../../scenes/global/Header";
+import NavButton from "../../scenes/global/NavButton.jsx";
 
 const Rotor = () => {
   const theme = useTheme();
@@ -96,6 +97,9 @@ const Rotor = () => {
           </Grid>
         ))}
       </Grid>
+      <Box m={2} display="flex" justifyContent="right" alignItems="center">
+        <NavButton title="Home" path="/digitally-integrated-production" />
+      </Box>
     </Box>
   );
 };

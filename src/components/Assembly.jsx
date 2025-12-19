@@ -5,6 +5,7 @@ import Header from "../scenes/global/Header";
 import electricalMotor from "../assets/assembly/electricMotor.png";
 import electricalMotorHousing from "../assets/assembly/electricMotorHousing.png";
 import assembly from "../assets/assembly/shaft.png";
+import NavButton from "../scenes/global/NavButton";
 
 const Assembly = () => {
   const theme = useTheme();
@@ -181,6 +182,9 @@ const Assembly = () => {
           </Grid>
         </Grid>
       </Grid>
+      <Box m={2} display="flex" justifyContent="right" alignItems="center">
+        <NavButton title="Home" path="/digital-assistance" />
+      </Box>
     </Box>
   );
 };

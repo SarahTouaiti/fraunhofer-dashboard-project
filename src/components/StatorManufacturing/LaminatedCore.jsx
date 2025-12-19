@@ -2,6 +2,7 @@ import { Box, Paper, Grid, Typography, Divider, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
 import Header from "../../scenes/global/Header";
 import { sheetsData } from "../../data/sheetsData.js";
+import NavButton from "../../scenes/global/NavButton.jsx";
 
 const LaminatedCore = () => {
   const theme = useTheme();
@@ -80,6 +81,9 @@ const LaminatedCore = () => {
           </Grid>
         ))}
       </Grid>
+      <Box m={2} display="flex" justifyContent="right" alignItems="center">
+        <NavButton title="Home" path="/digitally-integrated-production" />
+      </Box>
     </Box>
   );
 };
