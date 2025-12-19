@@ -90,7 +90,6 @@ const Assembly = () => {
               transition: "transform 0.2s, background-color 0.2s",
               "&:hover": {
                 transform: "scale(1.03)",
-                backgroundColor: colors.primary[300],
               },
             }}
           >
@@ -147,7 +146,6 @@ const Assembly = () => {
               transition: "transform 0.2s, background-color 0.2s",
               "&:hover": {
                 transform: "scale(1.03)",
-                backgroundColor: colors.primary[300],
               },
             }}
           >

@@ -14,7 +14,7 @@ const UnderDevelopment = ({ title }) => {
           maxWidth: 600,
           textAlign: "center",
           borderRadius: 3,
-          backgroundColor: colors.primary[500],
+          backgroundColor: colors.primary[400],
         }}
       >
         <Typography
