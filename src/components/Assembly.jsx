@@ -6,16 +6,19 @@ import electricalMotor from "../assets/assembly/electricMotor.png";
 import electricalMotorHousing from "../assets/assembly/electricMotorHousing.png";
 import assembly from "../assets/assembly/shaft.png";
 import NavButton from "../scenes/global/NavButton";
+import { useTranslation } from "react-i18next";
 
 const Assembly = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const { t } = useTranslation();
+
   const navigate = useNavigate();
   return (
     <Box>
       <Header
-        title="Digital Assistance > Assembly"
-        subtitle="Assemble two components using a guide for efficient process automation, or use our chatbot for additional support."
+        title={t("assembly.headerTitle")}
+        subtitle={t("assembly.headerSubtitle")}
       />
       <Grid container spacing={4} m={2}>
         {/* LEFT COLUMN */}
@@ -49,7 +52,7 @@ const Assembly = () => {
             fontWeight="bold"
             textAlign="center"
           >
-            Assembly
+            {t("assembly.assemblyTitle")}
           </Typography>
 
           <Divider
@@ -67,8 +70,7 @@ const Assembly = () => {
             textAlign="center"
             mb={2}
           >
-            Check the availability and status of the 3D-printed parts to proceed
-            with the assembly and keep the process efficient.
+            {t("assembly.assemblyDescription")}
           </Typography>
         </Grid>
 
@@ -108,7 +110,7 @@ const Assembly = () => {
                 color={colors.greenAccent[500]}
                 fontWeight="bold"
               >
-                Electrical Motor Housing
+                {t("assembly.electricalMotorHousingTitle")}
               </Typography>
               <Divider
                 sx={{
@@ -119,12 +121,11 @@ const Assembly = () => {
                 }}
               />
               <Typography variant="h5" color={colors.grey[100]}>
-                The housing for the electrical motor must be assembled precisely
-                to ensure optimal performance.
+                {t("assembly.electricalMotorHousingDescription")}
               </Typography>
               <Typography variant="h5" mt={1}>
                 <Link href="#" color={colors.blueAccent[500]} underline="hover">
-                  Go to guide
+                  {t("assembly.goToGuide")}
                 </Link>
               </Typography>
             </Grid>
@@ -164,7 +165,7 @@ const Assembly = () => {
                 color={colors.greenAccent[500]}
                 fontWeight="bold"
               >
-                Electrical Motor
+                {t("assembly.electricalMotorTitle")}
               </Typography>
               <Divider
                 sx={{
@@ -175,15 +176,14 @@ const Assembly = () => {
                 }}
               />
               <Typography variant="h5" color={colors.grey[100]}>
-                The electric motor is a central component of the assembly. Make
-                sure all parts are ready for installation.
+                {t("assembly.electricalMotorDescription")}
               </Typography>
             </Grid>
           </Grid>
         </Grid>
       </Grid>
       <Box m={2} display="flex" justifyContent="right" alignItems="center">
-        <NavButton title="Home" path="/digital-assistance" />
+        <NavButton title={t("assembly.home")} path="/digital-assistance" />
       </Box>
     </Box>
   );

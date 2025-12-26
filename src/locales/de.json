@@ -1,0 +1,14 @@
+{
+  "assembly": {
+    "headerTitle": "Digitale Assistenz > Montage",
+    "headerSubtitle": "Montieren Sie zwei Komponenten mit einer Anleitung für effiziente Prozessautomatisierung oder nutzen Sie unseren Chatbot für zusätzliche Unterstützung.",
+    "assemblyTitle": "Montage",
+    "assemblyDescription": "Überprüfen Sie die Verfügbarkeit und den Status der 3D-gedruckten Teile, um mit der Montage fortzufahren und den Prozess effizient zu halten.",
+    "electricalMotorHousingTitle": "Gehäuse für Elektromotor",
+    "electricalMotorHousingDescription": "Das Gehäuse für den Elektromotor muss präzise montiert werden, um optimale Leistung zu gewährleisten.",
+    "goToGuide": "Zur Anleitung",
+    "electricalMotorTitle": "Elektromotor",
+    "electricalMotorDescription": "Der Elektromotor ist eine zentrale Komponente der Montage. Stellen Sie sicher, dass alle Teile für die Installation bereit sind.",
+    "home": "Startseite"
+  }
+}

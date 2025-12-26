@@ -1,0 +1,14 @@
+{
+  "assembly": {
+    "headerTitle": "Digital Assistance > Assembly",
+    "headerSubtitle": "Assemble two components using a guide for efficient process automation, or use our chatbot for additional support.",
+    "assemblyTitle": "Assembly",
+    "assemblyDescription": "Check the availability and status of the 3D-printed parts to proceed with the assembly and keep the process efficient.",
+    "electricalMotorHousingTitle": "Electrical Motor Housing",
+    "electricalMotorHousingDescription": "The housing for the electrical motor must be assembled precisely to ensure optimal performance.",
+    "goToGuide": "Go to guide",
+    "electricalMotorTitle": "Electrical Motor",
+    "electricalMotorDescription": "The electric motor is a central component of the assembly. Make sure all parts are ready for installation.",
+    "home": "Home"
+  }
+}
