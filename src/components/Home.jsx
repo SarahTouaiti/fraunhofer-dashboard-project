@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Box, Grid, Typography, Divider, useTheme } from "@mui/material";
 import { tokens } from "../theme";
+import { useTranslation } from "react-i18next";
 
 import reTraNetzLogo from "../assets/home/reTraNetz.png";
 import digitalAssistance from "../assets/home/digitalAssistance.png";
@@ -16,6 +17,7 @@ const Home = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -33,7 +35,7 @@ const Home = () => {
           fontWeight={"normal"}
           mb="5px"
         >
-          Welcome to
+          {t("home.headerSubtitleTop")}
         </Typography>
         <Typography
           variant="h2"
@@ -41,11 +43,10 @@ const Home = () => {
           fontWeight={"bold"}
           mb="5px"
         >
-          ReTraNetz-BB
+          {t("home.headerTitle")}
         </Typography>
         <Typography variant="h3" color={colors.grey[100]} fontWeight={"normal"}>
-          Regional Transformation Network for the Automotive and Supplier
-          Industry
+          {t("home.headerSubtitleBottom")}
         </Typography>
       </Box>
 
@@ -77,7 +78,7 @@ const Home = () => {
               color={colors.greenAccent[500]}
               fontWeight={"bold"}
             >
-              ReTraNetz-BB
+              {t("home.welcomeTitle")}
             </Typography>
             <Divider
               sx={{
@@ -89,8 +90,7 @@ const Home = () => {
               }}
             />
             <Typography variant="h5" color={colors.grey[100]} mb={"20px"}>
-              ReTraNetz-BB is a network that supports companies in the
-              automotive and supplier industry.
+              {t("home.welcomeDescription")}
             </Typography>
           </Grid>
         </Grid>
@@ -128,7 +128,7 @@ const Home = () => {
                 color={colors.greenAccent[500]}
                 fontWeight={"bold"}
               >
-                Digital Assistance
+                {t("home.digitalAssistanceTitle")}
               </Typography>
               <Divider
                 sx={{
@@ -139,8 +139,7 @@ const Home = () => {
                 }}
               />
               <Typography variant="body1" color={colors.grey[100]}>
-                Digital assistants support employees in production by providing
-                targeted information.
+                {t("home.digitalAssistanceDescription")}
               </Typography>
             </Grid>
           </Grid>
@@ -176,7 +175,7 @@ const Home = () => {
                 color={colors.greenAccent[500]}
                 fontWeight={"bold"}
               >
-                Energy Monitoring
+                {t("home.energyMonitoringTitle")}
               </Typography>
               <Divider
                 sx={{
@@ -187,8 +186,7 @@ const Home = () => {
                 }}
               />
               <Typography variant="body1" color={colors.grey[100]}>
-                Innovative manufacturing technologies enable effective energy
-                management within research.
+                {t("home.energyMonitoringDescription")}
               </Typography>
             </Grid>
           </Grid>
@@ -224,7 +222,7 @@ const Home = () => {
                 color={colors.greenAccent[500]}
                 fontWeight={"bold"}
               >
-                Digitally Integrated Production
+                {t("home.digitallyIntegratedProductionTitle")}
               </Typography>
               <Divider
                 sx={{
@@ -235,8 +233,7 @@ const Home = () => {
                 }}
               />
               <Typography variant="body1" color={colors.grey[100]}>
-                Digitally integrated production optimizes manufacturing
-                processes through the use of modern technologies.
+                {t("home.digitallyIntegratedProductionDescription")}
               </Typography>
             </Grid>
           </Grid>

@@ -1,15 +1,19 @@
 {
-  "assembly": {
-    "headerTitle": "Digitale Assistenz > Montage",
-    "headerSubtitle": "Montieren Sie zwei Komponenten mit einer Anleitung für effiziente Prozessautomatisierung oder nutzen Sie unseren Chatbot für zusätzliche Unterstützung.",
-    "assemblyTitle": "Montage",
-    "assemblyDescription": "Überprüfen Sie die Verfügbarkeit und den Status der 3D-gedruckten Teile, um mit der Montage fortzufahren und den Prozess effizient zu halten.",
-    "electricalMotorHousingTitle": "Gehäuse für Elektromotor",
-    "electricalMotorHousingDescription": "Das Gehäuse für den Elektromotor muss präzise montiert werden, um optimale Leistung zu gewährleisten.",
-    "goToGuide": "Zur Anleitung",
-    "electricalMotorTitle": "Elektromotor",
-    "electricalMotorDescription": "Der Elektromotor ist eine zentrale Komponente der Montage. Stellen Sie sicher, dass alle Teile für die Installation bereit sind.",
-    "home": "Startseite"
+  "topbar": {
+    "search": "suche"
+  },
+  "home": {
+    "headerTitle": "ReTraNetz-BB",
+    "headerSubtitleTop": "Willkommen bei",
+    "headerSubtitleBottom": "Regionales Transformationsnetzwerk für die Automobil- und Zulieferindustrie",
+    "welcomeTitle": "ReTraNetz-BB",
+    "welcomeDescription": "ReTraNetz-BB ist ein Netzwerk, das Unternehmen der Automobil- und Zulieferindustrie unterstützt.",
+    "digitalAssistanceTitle": "Digitale Assistenz",
+    "digitalAssistanceDescription": "Digitale Assistenten unterstützen Mitarbeitende in der Produktion durch gezielte Bereitstellung von Informationen.",
+    "energyMonitoringTitle": "Energiemonitoring",
+    "energyMonitoringDescription": "Innovative Fertigungstechnologien ermöglichen ein effektives Energiemanagement in der Forschung.",
+    "digitallyIntegratedProductionTitle": "Digital Integrierte Produktion",
+    "digitallyIntegratedProductionDescription": "Digital integrierte Produktion optimiert Fertigungsprozesse durch den Einsatz moderner Technologien."
   },
   "digitalAssistance": {
     "headerSubtitleTop": "ReTraNetz-BB",
@@ -21,6 +25,18 @@
     "assemblyDescription": "Erlernen Sie den Montageprozess Schritt für Schritt, um Fehler zu minimieren.",
     "chatbotTitle": "Chatbot",
     "chatbotDescription": "Nutzen Sie den Chatbot, um schnell Antworten auf Ihre Fragen zu erhalten.",
+    "home": "Startseite"
+  },
+  "assembly": {
+    "headerTitle": "Digitale Assistenz > Montage",
+    "headerSubtitle": "Montieren Sie zwei Komponenten mit einer Anleitung für effiziente Prozessautomatisierung oder nutzen Sie unseren Chatbot für zusätzliche Unterstützung.",
+    "assemblyTitle": "Montage",
+    "assemblyDescription": "Überprüfen Sie die Verfügbarkeit und den Status der 3D-gedruckten Teile, um mit der Montage fortzufahren und den Prozess effizient zu halten.",
+    "electricalMotorHousingTitle": "Gehäuse für Elektromotor",
+    "electricalMotorHousingDescription": "Das Gehäuse für den Elektromotor muss präzise montiert werden, um optimale Leistung zu gewährleisten.",
+    "goToGuide": "Zur Anleitung",
+    "electricalMotorTitle": "Elektromotor",
+    "electricalMotorDescription": "Der Elektromotor ist eine zentrale Komponente der Montage. Stellen Sie sicher, dass alle Teile für die Installation bereit sind.",
     "home": "Startseite"
   }
 }
