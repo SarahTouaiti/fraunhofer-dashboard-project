@@ -5,11 +5,13 @@ import digitalAssistance from "../assets/digitalAssistance/digitalAssistanceComp
 import Assembly from "../assets/digitalAssistance/assembly.png";
 import Chatbot from "../assets/digitalAssistance/chatBot.png";
 import NavButton from "../scenes/global/NavButton";
+import { useTranslation } from "react-i18next";
 
 const DigitalAssistance = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <Box>
@@ -27,7 +29,7 @@ const DigitalAssistance = () => {
           fontWeight="normal"
           mb="5px"
         >
-          ReTraNetz-BB
+          {t("digitalAssistance.headerSubtitleTop")}
         </Typography>
         <Typography
           variant="h2"
@@ -35,7 +37,7 @@ const DigitalAssistance = () => {
           fontWeight="bold"
           mb="5px"
         >
-          Digital Assistance
+          {t("digitalAssistance.headerTitle")}
         </Typography>
         <Typography
           variant="h3"
@@ -43,7 +45,7 @@ const DigitalAssistance = () => {
           fontWeight="normal"
           mb="5px"
         >
-          Efficient Process Automation and Intelligent Support
+          {t("digitalAssistance.headerSubtitleBottom")}
         </Typography>
       </Box>
 
@@ -80,7 +82,7 @@ const DigitalAssistance = () => {
             fontWeight="bold"
             textAlign="center"
           >
-            Digital Assistance
+            {t("digitalAssistance.digitalAssistanceTitle")}
           </Typography>
 
           <Divider
@@ -98,8 +100,7 @@ const DigitalAssistance = () => {
             textAlign="center"
             mb={2}
           >
-            Discover new opportunities to optimize your workflows and improve
-            your efficiency through tailored solutions.
+            {t("digitalAssistance.digitalAssistanceDescription")}
           </Typography>
         </Grid>
 
@@ -137,7 +138,7 @@ const DigitalAssistance = () => {
                 color={colors.greenAccent[500]}
                 fontWeight="bold"
               >
-                Assembly
+                {t("digitalAssistance.assemblyTitle")}
               </Typography>
               <Divider
                 sx={{
@@ -148,7 +149,7 @@ const DigitalAssistance = () => {
                 }}
               />
               <Typography variant="h5" color={colors.grey[100]}>
-                Learn the assembly process step by step to minimize errors.
+                {t("digitalAssistance.assemblyDescription")}
               </Typography>
             </Grid>
           </Grid>
@@ -185,7 +186,7 @@ const DigitalAssistance = () => {
                 color={colors.greenAccent[500]}
                 fontWeight="bold"
               >
-                Chatbot
+                {t("digitalAssistance.chatbotTitle")}
               </Typography>
               <Divider
                 sx={{
@@ -196,14 +197,14 @@ const DigitalAssistance = () => {
                 }}
               />
               <Typography variant="h5" color={colors.grey[100]}>
-                Use Chatbot to quickly get answers to your questions.
+                {t("digitalAssistance.chatbotDescription")}
               </Typography>
             </Grid>
           </Grid>
         </Grid>
       </Grid>
       <Box m={2} display="flex" justifyContent="right" alignItems="center">
-        <NavButton title="Home" path="/" />
+        <NavButton title={t("digitalAssistance.home")} path="/" />
       </Box>
     </Box>
   );

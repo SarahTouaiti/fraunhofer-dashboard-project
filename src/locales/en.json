@@ -10,5 +10,17 @@
     "electricalMotorTitle": "Electrical Motor",
     "electricalMotorDescription": "The electric motor is a central component of the assembly. Make sure all parts are ready for installation.",
     "home": "Home"
+  },
+  "digitalAssistance": {
+    "headerSubtitleTop": "ReTraNetz-BB",
+    "headerTitle": "Digital Assistance",
+    "headerSubtitleBottom": "Efficient Process Automation and Intelligent Support",
+    "digitalAssistanceTitle": "Digital Assistance",
+    "digitalAssistanceDescription": "Discover new opportunities to optimize your workflows and improve your efficiency through tailored solutions.",
+    "assemblyTitle": "Assembly",
+    "assemblyDescription": "Learn the assembly process step by step to minimize errors.",
+    "chatbotTitle": "Chatbot",
+    "chatbotDescription": "Use Chatbot to quickly get answers to your questions.",
+    "home": "Home"
   }
 }

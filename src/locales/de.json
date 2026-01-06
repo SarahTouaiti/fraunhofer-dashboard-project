@@ -10,5 +10,17 @@
     "electricalMotorTitle": "Elektromotor",
     "electricalMotorDescription": "Der Elektromotor ist eine zentrale Komponente der Montage. Stellen Sie sicher, dass alle Teile für die Installation bereit sind.",
     "home": "Startseite"
+  },
+  "digitalAssistance": {
+    "headerSubtitleTop": "ReTraNetz-BB",
+    "headerTitle": "Digitale Assistenz",
+    "headerSubtitleBottom": "Effiziente Prozessautomatisierung und intelligente Unterstützung",
+    "digitalAssistanceTitle": "Digitale Assistenz",
+    "digitalAssistanceDescription": "Entdecken Sie neue Möglichkeiten, Ihre Arbeitsabläufe zu optimieren und Ihre Effizienz durch maßgeschneiderte Lösungen zu verbessern.",
+    "assemblyTitle": "Montage",
+    "assemblyDescription": "Erlernen Sie den Montageprozess Schritt für Schritt, um Fehler zu minimieren.",
+    "chatbotTitle": "Chatbot",
+    "chatbotDescription": "Nutzen Sie den Chatbot, um schnell Antworten auf Ihre Fragen zu erhalten.",
+    "home": "Startseite"
   }
 }
