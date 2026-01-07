@@ -3,13 +3,15 @@ import { tokens } from "../../theme";
 import { rotorData } from "../../data/rotorData";
 import Header from "../../scenes/global/Header";
 import NavButton from "../../scenes/global/NavButton.jsx";
+import { useTranslation } from "react-i18next";
 
 const Rotor = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const { t } = useTranslation();
   return (
     <Box>
-      <Header title="Digitally Integrated Production" subtitle="Rotor" />
+      <Header title={t("rotor.title")} subtitle={t("rotor.subtitle")} />
       <Grid
         container
         spacing={2}
@@ -55,11 +57,11 @@ const Rotor = () => {
               <Box
                 component="img"
                 src={item.image}
-                alt={item.name}
+                alt={t(item.nameKey)}
                 sx={{ width: 100, height: 100, borderRadius: "5px", mb: 2 }}
               />
               <Typography variant="h4" color={colors.greenAccent[500]} mb={2}>
-                {item.name}
+                {t(item.nameKey)}
               </Typography>
               <Divider
                 sx={{
@@ -78,27 +80,32 @@ const Rotor = () => {
                   gap: 1,
                 }}
               >
-                {item.description.map((desc, descIndex) => (
-                  <Typography
-                    key={descIndex}
-                    variant="body2"
-                    color={colors.grey[100]}
-                    sx={{
-                      lineHeight: 1.6,
-                      letterSpacing: "0.02em",
-                      fontWeight: 300,
-                    }}
-                  >
-                    • {desc}
-                  </Typography>
-                ))}
+                {t(item.descKey, { returnObjects: true }).map(
+                  (desc, descIndex) => (
+                    <Typography
+                      key={descIndex}
+                      variant="body2"
+                      color={colors.grey[100]}
+                      sx={{
+                        lineHeight: 1.6,
+                        letterSpacing: "0.02em",
+                        fontWeight: 300,
+                      }}
+                    >
+                      • {desc}
+                    </Typography>
+                  )
+                )}
               </Box>
             </Paper>
           </Grid>
         ))}
       </Grid>
       <Box m={2} display="flex" justifyContent="right" alignItems="center">
-        <NavButton title="Home" path="/digitally-integrated-production" />
+        <NavButton
+          title={t("rotor.home")}
+          path="/digitally-integrated-production"
+        />
       </Box>
     </Box>
   );

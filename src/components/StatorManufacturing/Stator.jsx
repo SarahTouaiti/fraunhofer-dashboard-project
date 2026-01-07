@@ -3,13 +3,16 @@ import { tokens } from "../../theme";
 import Header from "../../scenes/global/Header";
 import { statorData } from "../../data/statorData.js";
 import NavButton from "../../scenes/global/NavButton.jsx";
+import { useTranslation } from "react-i18next";
 
 const Stator = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const { t } = useTranslation();
+
   return (
     <Box>
-      <Header title="Digitally Integrated Production" subtitle="Stator" />
+      <Header title={t("stator.title")} subtitle={t("stator.subtitle")} />
       <Grid
         container
         spacing={2}
@@ -55,7 +58,7 @@ const Stator = () => {
               <Box
                 component="img"
                 src={item.image}
-                alt={item.name}
+                alt={t(item.nameKey)}
                 sx={{
                   width: 100,
                   height: "auto",
@@ -64,7 +67,7 @@ const Stator = () => {
                 }}
               />
               <Typography variant="h4" color={colors.greenAccent[500]} mb={2}>
-                {item.name}
+                {t(item.nameKey)}
               </Typography>
               <Divider
                 sx={{
@@ -83,27 +86,32 @@ const Stator = () => {
                   gap: 1,
                 }}
               >
-                {item.description.map((desc, descIndex) => (
-                  <Typography
-                    key={descIndex}
-                    variant="body2"
-                    color={colors.grey[100]}
-                    sx={{
-                      lineHeight: 1.6,
-                      letterSpacing: "0.02em",
-                      fontWeight: 300,
-                    }}
-                  >
-                    • {desc}
-                  </Typography>
-                ))}
+                {t(item.descKey, { returnObjects: true }).map(
+                  (desc, descIndex) => (
+                    <Typography
+                      key={descIndex}
+                      variant="body2"
+                      color={colors.grey[100]}
+                      sx={{
+                        lineHeight: 1.6,
+                        letterSpacing: "0.02em",
+                        fontWeight: 300,
+                      }}
+                    >
+                      • {t(desc)}
+                    </Typography>
+                  )
+                )}
               </Box>
             </Paper>
           </Grid>
         ))}
       </Grid>
       <Box m={2} display="flex" justifyContent="right" alignItems="center">
-        <NavButton title="Home" path="/digitally-integrated-production" />
+        <NavButton
+          title={t("stator.home")}
+          path="/digitally-integrated-production"
+        />
       </Box>
     </Box>
   );

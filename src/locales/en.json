@@ -38,5 +38,150 @@
     "electricalMotorTitle": "Electrical Motor",
     "electricalMotorDescription": "The electric motor is a central component of the assembly. Make sure all parts are ready for installation.",
     "home": "Home"
+  },
+  "underDevelopment": {
+    "note": "This section is currently under development. Please check back later for detailed content."
+  },
+  "parts": {
+    "title": "Digitally Integrated Production",
+    "stator": {
+      "name": "Stator",
+      "desc": "The stator generates the magnetic field in the motor and enables the rotor to rotate."
+    },
+    "laminatedCore": {
+      "name": "Laminated Core",
+      "desc": "The laminated core minimizes eddy current losses and improves motor efficiency."
+    },
+    "rotor": {
+      "name": "Rotor",
+      "desc": "The rotor rotates within the stator's magnetic field and generates the required motion."
+    },
+    "shaft": {
+      "name": "Shaft",
+      "desc": "The shaft transmits the rotor's rotary motion to the drive gear and other components."
+    },
+    "housing": {
+      "name": "Housing",
+      "desc": "The housing protects internal parts of the motor and provides mechanical stability."
+    },
+    "finalAssembly": {
+      "name": "Final Assembly",
+      "desc": "All parts are assembled and tested to ensure functionality."
+    },
+    "home": "Home"
+  },
+  "stator": {
+    "title": "Digitally Integrated Production",
+    "subtitle": "Stator",
+    "wireInsulation": {
+      "name": "Wire Insulation",
+      "desc": [
+        "The copper winding is coated with varnish to prevent short circuits.",
+        "The coating slightly reduces the slot fill factor."
+      ]
+    },
+    "slotInsulation": {
+      "name": "Slot Insulation",
+      "desc": [
+        "Sheet stacks are insulated in the slots using insulation paper to protect the copper winding.",
+        "This prevents voltage flashovers and damage from sharp edges."
+      ]
+    },
+    "roundWire": {
+      "name": "Round Wire",
+      "desc": [
+        "Round wire is made from copper.",
+        "It is produced through a sequence of drawing and rolling wire rods."
+      ]
+    },
+    "flatWire": {
+      "name": "Flat Wire",
+      "desc": [
+        "Utilizes hairpin technology.",
+        "Achieves a higher slot fill factor.",
+        "Improves motor efficiency."
+      ]
+    },
+    "impregnation": {
+      "name": "Impregnation",
+      "desc": [
+        "After winding, the coils are impregnated with resin to improve electrical insulation, thermal conductivity, and mechanical strength.",
+        "The impregnation process uses specialized resin materials."
+      ]
+    },
+    "home": "Home"
+  },
+  "laminatedCore": {
+    "title": "Digitally Integrated Production",
+    "subtitle": "Laminated Core",
+    "cuttingSheets": {
+      "name": "Cutting Sheets",
+      "desc": "In production, laser cutting and follow-up cutting are used for cutting the sheets."
+    },
+    "stackingSheets": {
+      "name": "Stacking Sheets",
+      "desc": "Punch-stacking the sheets and insulating them with bonding varnish are key processes in the manufacturing of traction motors."
+    },
+    "home": "Home"
+  },
+  "rotor": {
+    "title": "Digitally Integrated Production",
+    "subtitle": "Rotor",
+    "insulation": {
+      "name": "Insulation",
+      "desc": ["Insulation of the manufactured poles."]
+    },
+    "winding": {
+      "name": "Winding",
+      "desc": [
+        "Winding of the poles.",
+        "Linear, needle, or flyer winding methods are used."
+      ]
+    },
+    "commutator": {
+      "name": "Commutator",
+      "desc": [
+        "Assembly of the commutator.",
+        "The commutator enables continuous power supply to the rotor.",
+        "Assembly is carried out using axial joining."
+      ]
+    },
+    "contacting": {
+      "name": "Contacting",
+      "desc": ["Connection of the copper slip rings to the DC power source."]
+    },
+    "impregnation": {
+      "name": "Impregnation",
+      "desc": [
+        "Impregnation of the windings with resin to enhance insulation and mechanical strength."
+      ]
+    },
+    "electricalTesting": {
+      "name": "Electrical Testing",
+      "desc": [
+        "Testing of the windings using trial energization or inductive testing methods.",
+        "The commutator enables continuous energization of the rotor during operation."
+      ]
+    },
+    "magnetAssembly": {
+      "name": "Magnet Assembly",
+      "desc": ["Mounting of magnets in a non-magnetized state."]
+    },
+    "magnetFixation": {
+      "name": "Magnet Fixation",
+      "desc": [
+        "Magnets are inserted using adhesive bonding or mechanical fixation methods.",
+        "The process can be performed manually or automatically on the magnets or in the laminated core slots.",
+        "Curing then takes place at temperatures between 20°C and 200°C."
+      ]
+    },
+    "magnetization": {
+      "name": "Magnetization",
+      "desc": [
+        "Performed after assembly.",
+        "The commutator ensures continuous energization of the rotor through a multi-coil excitation system."
+      ]
+    },
+    "home": "Home"
   }
 }

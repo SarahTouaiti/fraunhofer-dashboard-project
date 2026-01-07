@@ -10,62 +10,48 @@ import Winding from "../assets/rotor/winding.png";
 
 export const rotorData = [
   {
-    name: "Insulation",
+    nameKey: "rotor.insulation.name",
     image: Insulation,
-    description: ["Insulation of the manufactured poles."],
+    descKey: "rotor.insulation.desc",
   },
   {
-    name: "Winding",
+    nameKey: "rotor.winding.name",
     image: Winding,
-    description: ["Winding of the poles.", "Linear, needle, or flyer winding."],
+    descKey: "rotor.winding.desc",
   },
   {
-    name: "Commutator",
+    nameKey: "rotor.commutator.name",
     image: Commutator,
-    description: [
-      "Assembly of the commutator.",
-      "The commutator enables continuous current supply to the rotor.",
-      "Assembly is carried out using axial joining.",
-    ],
+    descKey: "rotor.commutator.desc",
   },
   {
-    name: "Contacting",
+    nameKey: "rotor.contacting.name",
     image: Contacting,
-    description: ["Connection of copper slip rings to the DC source."],
+    descKey: "rotor.contacting.desc",
   },
   {
-    name: "Impregnation",
+    nameKey: "rotor.impregnation.name",
     image: Impregnation,
-    description: ["Impregnation of the windings with resin."],
+    descKey: "rotor.impregnation.desc",
   },
   {
-    name: "Electrical Testing",
+    nameKey: "rotor.electricalTesting.name",
     image: ElectricalTesting,
-    description: [
-      "Testing of the windings through trial energization or inductive testing methods.",
-      "The commutator allows continuous energization of the rotor.",
-    ],
+    descKey: "rotor.electricalTesting.desc",
   },
   {
-    name: "Magnet Assembly",
+    nameKey: "rotor.magnetAssembly.name",
     image: MagnetAssembly,
-    description: ["Mounting of magnets in a non-magnetized state."],
+    descKey: "rotor.magnetAssembly.desc",
   },
   {
-    name: "Magnet Fixation",
+    nameKey: "rotor.magnetFixation.name",
     image: MagnetFixation,
-    description: [
-      "Magnets are inserted using adhesive bonding or mechanical fixation.",
-      "Performed manually or automatically on the magnets or slots of the laminated core.",
-      "Then cured at 20–200°C.",
-    ],
+    descKey: "rotor.magnetFixation.desc",
   },
   {
-    name: "Magnetization",
+    nameKey: "rotor.magnetization.name",
     image: Magnetization,
-    description: [
-      "Takes place after assembly.",
-      "The commutator enables continuous energization of the rotor through a multi-coil excitation system.",
-    ],
+    descKey: "rotor.magnetization.desc",
   },
 ];

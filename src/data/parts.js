@@ -5,39 +5,39 @@ import shaft from "../assets/parts/shaft.png";
 
 export const parts = [
   {
-    name: "Stator",
+    nameKey: "parts.stator.name",
     img: stator,
-    desc: "The stator generates the magnetic field in the motor and enables the rotor to rotate.",
+    descKey: "parts.stator.desc",
     link: "/digital-assistance/assembly/stator",
   },
   {
-    name: "Laminated Core",
+    nameKey: "parts.laminatedCore.name",
     img: laminatedCore,
-    desc: "The laminated core minimizes eddy current losses and improves motor efficiency.",
+    descKey: "parts.laminatedCore.desc",
     link: "/digital-assistance/assembly/laminated-core",
   },
   {
-    name: "Rotor",
+    nameKey: "parts.rotor.name",
     img: rotor,
-    desc: "The rotor rotates within the stator's magnetic field and generates the required motion.",
+    descKey: "parts.rotor.desc",
     link: "/digital-assistance/assembly/rotor",
   },
   {
-    name: "Shaft",
+    nameKey: "parts.shaft.name",
     img: shaft,
-    desc: "The shaft transmits the rotor's rotary motion to the drive gear and other components.",
+    descKey: "parts.shaft.desc",
     link: "/digital-assistance/assembly/shaft",
   },
   {
-    name: "Housing",
+    nameKey: "parts.housing.name",
     img: shaft,
-    desc: "The housing protects internal parts of the motor and provides mechanical stability.",
+    descKey: "parts.housing.desc",
     link: "/digital-assistance/assembly/housing",
   },
   {
-    name: "Final Assembly",
+    nameKey: "parts.finalAssembly.name",
     img: shaft,
-    desc: "All parts are assembled and tested to ensure functionality.",
+    descKey: "parts.finalAssembly.desc",
     link: "/digital-assistance/assembly/final-assembly",
   },
 ];

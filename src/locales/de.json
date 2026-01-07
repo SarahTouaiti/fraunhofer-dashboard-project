@@ -38,5 +38,150 @@
     "electricalMotorTitle": "Elektromotor",
     "electricalMotorDescription": "Der Elektromotor ist eine zentrale Komponente der Montage. Stellen Sie sicher, dass alle Teile für die Installation bereit sind.",
     "home": "Startseite"
+  },
+  "underDevelopment": {
+    "note": "Dieser Bereich befindet sich derzeit in der Entwicklung. Bitte schauen Sie später wieder vorbei, um ausführliche Inhalte zu sehen."
+  },
+  "parts": {
+    "title": "Digital Integrierte Produktion",
+    "stator": {
+      "name": "Stator",
+      "desc": "Der Stator erzeugt das Magnetfeld im Motor und ermöglicht dem Rotor die Rotation."
+    },
+    "laminatedCore": {
+      "name": "Blechpaket",
+      "desc": "Das Blechpaket minimiert Wirbelstromverluste und verbessert die Motorleistung."
+    },
+    "rotor": {
+      "name": "Rotor",
+      "desc": "Der Rotor dreht sich im Magnetfeld des Stators und erzeugt die erforderliche Bewegung."
+    },
+    "shaft": {
+      "name": "Welle",
+      "desc": "Die Welle überträgt die Drehbewegung des Rotors auf das Antriebszahnrad und andere Komponenten."
+    },
+    "housing": {
+      "name": "Gehäuse",
+      "desc": "Das Gehäuse schützt die internen Motorteile und sorgt für mechanische Stabilität."
+    },
+    "finalAssembly": {
+      "name": "Endmontage",
+      "desc": "Alle Teile werden montiert und geprüft, um die Funktionalität sicherzustellen."
+    },
+    "home": "Startseite"
+  },
+  "stator": {
+    "title": "Digital Integrierte Produktion",
+    "subtitle": "Stator",
+    "wireInsulation": {
+      "name": "Drahtisolierung",
+      "desc": [
+        "Die Kupferwicklung ist mit Lack überzogen, um Kurzschlüsse zu verhindern.",
+        "Die Beschichtung reduziert leicht den Schachtfüllfaktor."
+      ]
+    },
+    "slotInsulation": {
+      "name": "Nutenisolierung",
+      "desc": [
+        "Die Blechpakete in den Nuten werden mit Isolierpapier isoliert, um die Kupferwicklung zu schützen.",
+        "Dies verhindert Spannungsüberschläge und Schäden durch scharfe Kanten."
+      ]
+    },
+    "roundWire": {
+      "name": "Runddraht",
+      "desc": [
+        "Runddraht besteht aus Kupfer.",
+        "Er wird durch ein Zieh- und Walzverfahren aus Drahtstangen hergestellt."
+      ]
+    },
+    "flatWire": {
+      "name": "Flachdraht",
+      "desc": [
+        "Verwendet Hairpin-Technologie.",
+        "Erreicht einen höheren Schachtfüllfaktor.",
+        "Verbessert den Motorwirkungsgrad."
+      ]
+    },
+    "impregnation": {
+      "name": "Imprägnierung",
+      "desc": [
+        "Nach dem Wickeln werden die Spulen mit Harz imprägniert, um die elektrische Isolierung, die Wärmeleitfähigkeit und die mechanische Festigkeit zu verbessern.",
+        "Der Imprägnierungsprozess verwendet spezialisierte Harzmaterialien."
+      ]
+    },
+    "home": "Startseite"
+  },
+  "laminatedCore": {
+    "title": "Digital Integrierte Produktion",
+    "subtitle": "Blechpaket",
+    "cuttingSheets": {
+      "name": "Bleche ausschneiden",
+      "desc": "Bei der Produktion kommen für das Ausschneiden der Bleche die Produktionsverfahren Laserstrahlschneiden und Folgeschnitt zum Einsatz."
+    },
+    "stackingSheets": {
+      "name": "Bleche paketieren",
+      "desc": "Das Stanzpaketieren der Bleche und die Isolierung durch Verkleben mit Backlack sind zentrale Verfahren bei der Herstellung von Traktionsmotoren."
+    },
+    "home": "Startseite"
+  },
+  "rotor": {
+    "title": "Digital Integrierte Produktion",
+    "subtitle": "Rotor",
+    "insulation": {
+      "name": "Isolierung",
+      "desc": ["Isolierung der gefertigten Pole."]
+    },
+    "winding": {
+      "name": "Wicklung",
+      "desc": [
+        "Wicklung der Pole.",
+        "Verwendung von Linear-, Nadel- oder Flyerwickelverfahren."
+      ]
+    },
+    "commutator": {
+      "name": "Kollektor",
+      "desc": [
+        "Montage des Kollektors.",
+        "Der Kollektor ermöglicht die kontinuierliche Stromzufuhr zum Rotor.",
+        "Die Montage erfolgt durch axiales Fügen."
+      ]
+    },
+    "contacting": {
+      "name": "Kontaktierung",
+      "desc": ["Anschluss der Kupferschleifringe an die Gleichstromquelle."]
+    },
+    "impregnation": {
+      "name": "Imprägnierung",
+      "desc": [
+        "Imprägnierung der Wicklungen mit Harz zur Verbesserung der Isolierung und der mechanischen Festigkeit."
+      ]
+    },
+    "electricalTesting": {
+      "name": "Elektrische Prüfung",
+      "desc": [
+        "Prüfung der Wicklungen durch Probe-Erregung oder induktive Testverfahren.",
+        "Der Kollektor ermöglicht die kontinuierliche Erregung des Rotors während des Betriebs."
+      ]
+    },
+    "magnetAssembly": {
+      "name": "Magnetmontage",
+      "desc": ["Montage der Magnete im unmagnetisierten Zustand."]
+    },
+    "magnetFixation": {
+      "name": "Magnetfixierung",
+      "desc": [
+        "Die Magnete werden mittels Klebeverbindung oder mechanischer Fixierung eingesetzt.",
+        "Der Prozess kann manuell oder automatisch an den Magneten oder in den Nuten des Blechpakets durchgeführt werden.",
+        "Die Aushärtung erfolgt anschließend bei Temperaturen zwischen 20 °C und 200 °C."
+      ]
+    },
+    "magnetization": {
+      "name": "Magnetisierung",
+      "desc": [
+        "Erfolgt nach der Montage.",
+        "Der Kollektor gewährleistet die kontinuierliche Erregung des Rotors über ein Mehrspulen-Erregungssystem."
+      ]
+    },
+    "home": "Startseite"
   }
 }

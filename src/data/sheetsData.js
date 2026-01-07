@@ -3,15 +3,13 @@ import stackingSheetsImage from "../assets/laminatedCore/stackingSheets.png";
 
 export const sheetsData = [
   {
-    name: "Cutting Sheets",
+    nameKey: "laminatedCore.cuttingSheets.name",
     image: cuttingSheetsImage,
-    description:
-      "Stacking the sheets using punching and isolating them with bonding varnish are key processes in the manufacturing of traction motors.",
+    descKey: "laminatedCore.cuttingSheets.desc",
   },
   {
-    name: "Stacking Sheets",
+    nameKey: "laminatedCore.stackingSheets.name",
     image: stackingSheetsImage,
-    description:
-      "Stacking the sheets using punching and isolating them with bonding varnish are key processes in the manufacturing of traction motors.",
+    descKey: "laminatedCore.stackingSheets.desc",
   },
 ];

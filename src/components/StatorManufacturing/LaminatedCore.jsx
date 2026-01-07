@@ -3,15 +3,18 @@ import { tokens } from "../../theme";
 import Header from "../../scenes/global/Header";
 import { sheetsData } from "../../data/sheetsData.js";
 import NavButton from "../../scenes/global/NavButton.jsx";
+import { useTranslation } from "react-i18next";
 
 const LaminatedCore = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const { t } = useTranslation();
+
   return (
     <Box>
       <Header
-        title="Digitally Integrated Production"
-        subtitle="Laminated Core"
+        title={t("laminatedCore.title")}
+        subtitle={t("laminatedCore.subtitle")}
       />
       <Grid
         container
@@ -51,11 +54,11 @@ const LaminatedCore = () => {
               <Box
                 component="img"
                 src={item.image}
-                alt={item.name}
+                alt={t(item.nameKey)}
                 sx={{ width: 100, height: "auto", borderRadius: "5px", mb: 2 }}
               />
               <Typography variant="h4" color={colors.greenAccent[500]} mb={2}>
-                {item.name}
+                {t(item.nameKey)}
               </Typography>
               <Divider
                 sx={{
@@ -74,7 +77,7 @@ const LaminatedCore = () => {
                     fontWeight: 300,
                   }}
                 >
-                  {item.description}
+                  {t(item.descKey)}
                 </Typography>
               </Box>
             </Paper>
@@ -82,7 +85,10 @@ const LaminatedCore = () => {
         ))}
       </Grid>
       <Box m={2} display="flex" justifyContent="right" alignItems="center">
-        <NavButton title="Home" path="/digitally-integrated-production" />
+        <NavButton
+          title={t("laminatedCore.home")}
+          path="/digitally-integrated-production"
+        />
       </Box>
     </Box>
   );

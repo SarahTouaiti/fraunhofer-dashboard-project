@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Box, Typography, Divider, Grid, Paper, useTheme } from "@mui/material";
 import { tokens } from "../theme";
+import { useTranslation } from "react-i18next";
 
 import { parts } from "../data/parts.js";
 
@@ -10,6 +11,8 @@ const DigitallyIntegratedProduction = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const navigate = useNavigate();
+  const { t } = useTranslation();
+
   return (
     <Box>
       {/* Header Section */}
@@ -25,7 +28,7 @@ const DigitallyIntegratedProduction = () => {
           color={colors.greenAccent[500]}
           fontWeight="bold"
         >
-          Digitally Integrated Production
+          {t("parts.title")}
         </Typography>
       </Box>
 
@@ -80,7 +83,7 @@ const DigitallyIntegratedProduction = () => {
               <Box
                 component="img"
                 src={part.img}
-                alt={part.name}
+                alt={t(part.nameKey)}
                 sx={{
                   width: 100,
                   height: "auto",
@@ -93,7 +96,7 @@ const DigitallyIntegratedProduction = () => {
                 color={colors.grey[100]}
                 fontWeight="bold"
               >
-                {part.name}
+                {t(part.nameKey)}
               </Typography>
               <Divider
                 sx={{
@@ -103,14 +106,14 @@ const DigitallyIntegratedProduction = () => {
                 }}
               />
               <Typography variant="h6" color={colors.grey[100]}>
-                {part.desc}
+                {t(part.descKey)}
               </Typography>
             </Paper>
           </Grid>
         ))}
       </Grid>
       <Box m={2} display="flex" justifyContent="right" alignItems="center">
-        <NavButton title="Home" path="/" />
+        <NavButton title={t("parts.home")} path="/" />
       </Box>
     </Box>
   );

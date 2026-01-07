@@ -1,9 +1,11 @@
 import { Box, Typography, useTheme, Paper } from "@mui/material";
 import { tokens } from "../../theme";
+import { useTranslation } from "react-i18next";
 
 const UnderDevelopment = ({ title }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const { t } = useTranslation();
 
   return (
     <Box m={3} display="flex" justifyContent="center" alignItems="center">
@@ -26,8 +28,7 @@ const UnderDevelopment = ({ title }) => {
           {title}
         </Typography>
         <Typography variant="body1" color={colors.grey[100]}>
-          This section is currently under development. Please check back later
-          for detailed content.
+          {t("underDevelopment.note")}
         </Typography>
       </Paper>
     </Box>
