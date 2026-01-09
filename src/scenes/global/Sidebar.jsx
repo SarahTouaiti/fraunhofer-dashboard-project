@@ -18,6 +18,7 @@ import {
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import LogOutIcon from "@mui/icons-material/Logout";
+import { useTranslation } from "react-i18next";
 
 export default function Sidebar() {
   const theme = useTheme();
@@ -25,6 +26,7 @@ export default function Sidebar() {
   const [selected, setSelected] = useState("");
   const [openItems, setOpenItems] = useState({});
   const drawerWidth = 300;
+  const { t } = useTranslation();
 
   const toggleItem = (title) => {
     setOpenItems((prev) => ({ ...prev, [title]: !prev[title] }));
@@ -96,7 +98,7 @@ export default function Sidebar() {
           <LogOutIcon />
         </IconButton>
         <Typography color={colors.grey[100]} ml={1}>
-          Logout
+          {t("menu.logout")}
         </Typography>
       </Box>
     </Drawer>
@@ -113,6 +115,7 @@ function SidebarSection({
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const isActive = selected === section.header;
+  const { t } = useTranslation();
 
   return (
     <Box px={2}>
@@ -137,7 +140,7 @@ function SidebarSection({
         onClick={() => setSelected(section.header)}
       >
         {section.icon && <Box mr={1}>{section.icon}</Box>}
-        {section.header}
+        {t(section.header)}
       </Typography>
 
       {/* Section items */}
@@ -169,6 +172,7 @@ function SidebarItem({
   const hasChildren = item.children && item.children.length > 0;
   const isActive = selected === item.title;
   const isOpen = openItems[item.title] || false;
+  const { t } = useTranslation();
 
   const handleClick = () => {
     setSelected(item.title);
@@ -194,7 +198,7 @@ function SidebarItem({
           },
         }}
       >
-        <ListItemText primary={item.title} />
+        <ListItemText primary={t(item.title)} />
         {hasChildren && (isOpen ? <ExpandLess /> : <ExpandMore />)}
       </ListItemButton>
 

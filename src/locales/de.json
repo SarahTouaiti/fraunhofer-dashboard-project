@@ -1,6 +1,6 @@
 {
   "topbar": {
-    "search": "suche"
+    "search": "Suche"
   },
   "home": {
     "headerTitle": "ReTraNetz-BB",
@@ -183,5 +183,37 @@
       ]
     },
     "home": "Startseite"
+  },
+  "menu": {
+    "toTheProject": "Zum Projekt",
+    "decentralizedProductionControl": "Dezentrale Produktionssteuerung",
+    "statorManufacturing": "Statorfertigung",
+    "stator": "Stator",
+    "laminatedCore": "Blechpaket",
+    "rotor": "Rotor",
+    "shaft": "Welle",
+    "housing": "Gehäuse",
+    "finalAssembly": "Endmontage",
+    "smartMaintenance": "Smart Maintenance",
+    "digitalAssistance": "Digitale Assistenz",
+    "assembly": "Montage",
+    "productSelection": "Produktauswahl",
+    "electricMotorHousing": "Gehäuse des Elektromotors",
+    "machineOperation": "Maschinenbedienung",
+    "helpChatbot": "Hilfe (ChatBot)",
+    "virtualEDMAssistance": "Virtuelle EDM-Assistenz",
+    "energyMonitoring": "Energiemonitoring",
+    "livingLaboratory": "Real Labor",
+    "dashboard": "Dashboard",
+    "ur10": "UR10",
+    "ur16": "UR16",
+    "experimentalHall": "Versuchshalle",
+    "exeronHSC600": "Exeron HSC 600",
+    "exeronHSC700": "Exeron HSC MP7",
+    "gfhGLCompactII": "GFH GL Compact II",
+    "exeronEDM313": "Exeron EDM 313",
+    "werthVideocheckHA400": "Werth VideoCheck HA 400",
+    "sumitomo": "SUMITOMO",
+    "logout": "Abmelden"
   }
 }

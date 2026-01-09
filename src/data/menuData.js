@@ -4,50 +4,61 @@ import BuildIcon from "@mui/icons-material/Build";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
 
 export const menu = [
-  { header: "To The Project", items: [], icon: <HomeIcon />, path: "/" },
+  { header: "menu.toTheProject", items: [], icon: <HomeIcon />, path: "/" },
 
   {
-    header: "Decentralized Production Control",
+    header: "menu.decentralizedProductionControl",
     icon: <WorkIcon />,
     items: [
       {
-        title: "Stator Manufacturing",
+        title: "menu.statorManufacturing",
         children: [
-          { title: "Stator", path: "/digital-assistance/assembly/stator" },
+          { title: "menu.stator", path: "/digital-assistance/assembly/stator" },
           {
-            title: "Laminated Core",
+            title: "menu.laminatedCore",
             path: "/digital-assistance/assembly/laminated-core",
           },
-          { title: "Rotor", path: "/digital-assistance/assembly/rotor" },
-          { title: "Shaft", path: "/digital-assistance/assembly/shaft" },
-          { title: "Housing", path: "/digital-assistance/assembly/housing" },
+          { title: "menu.rotor", path: "/digital-assistance/assembly/rotor" },
+          { title: "menu.shaft", path: "/digital-assistance/assembly/shaft" },
           {
-            title: "Final Assembly",
+            title: "menu.housing",
+            path: "/digital-assistance/assembly/housing",
+          },
+          {
+            title: "menu.finalAssembly",
             path: "/digital-assistance/assembly/final-assembly",
           },
         ],
       },
-      { title: "Smart Maintenance", path: "/smart-maintenance", children: [] },
+      {
+        title: "menu.smartMaintenance",
+        path: "/smart-maintenance",
+        children: [],
+      },
     ],
   },
 
   {
-    header: "Digital Assistance",
+    header: "menu.digitalAssistance",
     icon: <BuildIcon />,
     items: [
       {
-        title: "Assembly",
+        title: "menu.assembly",
+        path: "/digital-assistance/assembly",
         children: [
-          { title: "Product Selection", path: "/product-selection" },
-          { title: "Electric Motor Housing", path: "/electric-motor-housing" },
+          { title: "menu.productSelection", path: "/digital-assistance" },
+          {
+            title: "menu.electricMotorHousing",
+            path: "/electric-motor-housing",
+          },
         ],
       },
       {
-        title: "Machine Operation",
-        children: [{ title: "Help (ChatBot)", path: "/help-chatbot" }],
+        title: "menu.machineOperation",
+        children: [{ title: "menu.helpChatbot", path: "/help-chatbot" }],
       },
       {
-        title: "Virtual EDM Assistance",
+        title: "menu.virtualEDMAssistance",
         path: "/virtual-edm-assistance",
         children: [],
       },
@@ -55,36 +66,36 @@ export const menu = [
   },
 
   {
-    header: "Energy Monitoring",
+    header: "menu.energyMonitoring",
     icon: <ShowChartIcon />,
     items: [
       {
-        title: "Living Laboratory",
+        title: "menu.livingLaboratory",
         children: [
           {
-            title: "Dashboard",
+            title: "menu.dashboard",
             children: [
-              { title: "UR10", path: "/ur10" },
-              { title: "UR16", path: "/ur16" },
+              { title: "menu.ur10", path: "/ur10" },
+              { title: "menu.ur16", path: "/ur16" },
             ],
           },
         ],
       },
       {
-        title: "Experimental Hall",
+        title: "menu.experimentalHall",
         children: [
           {
-            title: "Dashboard",
+            title: "menu.dashboard",
             children: [
-              { title: "Exeron HSC 600", path: "/exeron-hsc-600" },
-              { title: "Exeron HSC MP7", path: "/exeron-hsc-mp7" },
-              { title: "GFH GL Compact II", path: "/gfh-gl-compact-ii" },
-              { title: "Exeron EDM 313", path: "/exeron-edm-313" },
+              { title: "menu.exeronHSC600", path: "/exeron-hsc-600" },
+              { title: "menu.exeronHSC700", path: "/exeron-hsc-mp7" },
+              { title: "menu.gfhGLCompactII", path: "/gfh-gl-compact-ii" },
+              { title: "menu.exeronEDM313", path: "/exeron-edm-313" },
               {
-                title: "Werth VideoCheck HA 400",
+                title: "menu.werthVideocheckHA400",
                 path: "/werth-videocheck-ha-400",
               },
-              { title: "SUMITOMO", path: "/sumitomo" },
+              { title: "menu.sumitomo", path: "/sumitomo" },
             ],
           },
         ],
